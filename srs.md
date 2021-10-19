@@ -80,7 +80,7 @@ Inspired by carpool coordination services like ‘BlaBlaCar’ or ‘Mitfahrzent
 
 ### 2.2 Use Case Diagram
 
-![OUCD](./UseCaseDiagramCP.png)
+![OUCD](./ucd.svg)
 
 - Green: Planned till end of december
 - Yellow: Planned till end of june
@@ -118,168 +118,139 @@ Testing:
 ## 3. Specific Requirements
 
 ### 3.1 Functionality
-This section will explain the different use cases, you could see in the Use Case Diagram, and their functionality.  
-Until December we plan to implement:
-- 3.1.1 Posting a session
-- 3.1.2 Getting an overview
-- 3.1.3 Creating an account
-- 3.1.4 Logging in
-- 3.1.5 Logging out
+In this section, our different use cases are explained. A structured representation can be found in the previous section.
+Until June, we plan to have the following implemented:
+- 3.1a) Menu
+- 3.1b) Level Design
+- 3.1c) Robots
+- 3.1d) Wizards
+- 3.1e) Player Progression System
+- 3.1f) Multiplayer
 
-Until June, we want to implement:
-- 3.1.6 Joining a session
-- 3.1.7 Keeping track of your sessions
-- 3.1.8 Leaving a session
-- 3.1.9 Finding a session
-- 3.1.10 Getting in touch
+However, some of these aspects have parts that are not included in the scope
+until December of this year. Hence, each aspect will be described along with
+the respective scopes.
 
-#### 3.1.1 Posting a session
-This feature is the essential one of our project. The user gets the possibility to post a session. Therefore, they have to select a game and also set the time when they want to play.For offline games, they have to set a location, too. For online games the location can be a server for example or simply be tagged as 'online'.
+#### 3.1a) Menu
+To keep things simple, at first the player will only be given the possibility to
+start a singleplayer game (1st semester). In the following semester, local highscores
+and settings shall also be inspectible from the menu. Last but not least, as an
+additional feature, the player should also be able to start multiplayer games.
 
-[Posting a session](./use_cases/UC1_Post_Session.md)
+#### 3.1b) Level Design
+Since this project is a game, there must be levels. The player must be able to see his
+score and his health. Levels should also have different styles, but this is an additional feature.
 
-#### 3.1.2 Getting an overview
-This feature provides a basic overview over all current sessions. All posted sessions are added here. From this overview you can select a session and from there join this session.
+#### 3.1c) Robots
+The robots are the evil enemies in this game, which must be defeated. In order to make the game more
+engaging, there will be different robot classes with different defining attributes (1st semester).
+Rewarding the player and making the game progressively harder is on the agenda for the second half of
+the project (2nd semester). Defeating different robots should yield different interesting buffs or
+items to help defeat the strenghening enemy party. Making the enemy waves more and more difficult
+makes the game more engaging. Additionally, we want smoothly animated robots (additional feature).
 
-[Session overview](./use_cases/UC3_Session_Overview.md)
+#### 3.1d) Wizard
+The game's protagonists are wizards. They defeat the robots using their spells and magic. Hence,
+the player character must be able to be moved in a simple manner and to cast spells and curses (1st semester).
+In order to help fighting the progressivly stronger waves, the wizard will be equipped with more diverse
+spells, which all have different aspects and tricks (2nd semester). Lastly, in addition, also the wizard
+shall be smoothly animated and it should be possible to use different cosmetics on him.
 
-#### 3.1.3 Creating an account
-To identify all useres we need an account system. This account system enables us to build important functions such as joining a session, leaving a session or a personalized overview over all sessions (Keeping track of your sessions).
+#### 3.1e) Player Progression System
+At first, the game should work in a basic manner. Therefore, the progression system will be part of the
+development in the second semester. There will be a skill tree, which gives an overview of what skills
+are to be unlocked, what and how much has to be done to do so and which skills are alraedy usable. It
+gives the game more depth. Besides, the player should be able to get a preview on the unlockable skills (additional feature).
 
-[Create an account](./use_cases/UC4_Create_Account.md)
-
-#### 3.1.4 Logging in
-The app will provide the possibility to register and log in. This will also make the usability easier when a user wants to manage his sessions, post or join a session because they don't have to enter their mail address every time.
-
-[Login](./use_cases/UC5_Login.md)
-
-#### 3.1.5 Logging out
-In case you share your phone, have multiple accounts or just want to be cautius about your privacy you should be able to manually log out.
-
-[Logout](./use_cases/UC6_Logout.md)
-
-#### 3.1.6 Joining a session
-There is also the possibility to join an existing game session. Therefore, the user can select a specific session.
-
-[Join a session](./use_cases/UC2_Join_Session.md)
-
-#### 3.1.7 Keeping track of your sessions
-The app provides the user with a seperate page view where they get an overview of all sessions they posted or joined. When the user clicks on a session, he can also see who joined his posted sessions.
-
-[Keeping track of your sessions](./use_cases/UC7_Keeping_Track.md)
-
-#### 3.1.8 Leaving a session
-The user gets also the possibility to delete a session he posted or to leave a session he joined.
-
-[Leaving a session](./use_cases/UC8_Leave_Session.md)
-
-#### 3.1.9 Finding a session
-Based on the overview over all sessions this features enables the user to find sessions by specific parameters. Therefore, the user can find a session by tags or other parameters like date. Later on, finding a session will be provided by geolocalization that the users can search for a session in a specific area.
-
-[Finding a session](./use_cases/UC9_Find_Session.md)
-
-#### 3.1.10 Getting in touch
-There must be the possibility that two people who want to play together can communicate with each other. The player who joins the session gets the possibility to contact the owner and vice versa. Later on, when we will have implemented profiles, then they will form another way to communicate with each other.
-
-[Getting in Touch](./use_cases/UC10_Getting_In_Touch.md)
-
-#### 3.1.11 Presenting yourself and checking out others
-With the possibility to log in there comes another functionality, the profile. Every user will have their own profile where they can write some informations about themselves. Because of the privacy policy in Europe, the user has the possibility to only write the information they want other people to see. Using the profile, users can also check out other players and learn e.g. their favorite games.
-
-#### 3.1.12 Reporting users and managing friends
-After a session, the app provides the users with the possibility to report the other participants. This is helpful because we want a community with fair players. Additionally, when they found an interesting person they can also add them to their friend list which also has a seperate page view.
-
-#### 3.1.13 Banning users and deleting posts
-There are also some functionalities for the admins. They will get the possibility to ban users and to delete any posts.
+#### 3.1f) Multiplayer
+Implementing multiplayer for games is not a trivial task. As such, it is postponed until the second semester.
+At first, local multiplayer will be made possible, then online multiplayer. This will also bring more depth
+to the game, since first, one can now play with others and communicate with them and second playing together
+will have some inherent effects on the game like stronger waves.
 
 ### 3.2 Usability
-We plan on designing the user interface as intuitive and self-explanatory as possible to make the user feel as comfortable as possible using the app. Though an FAQ document will be available, it should not be necessary to use it.
-
-#### 3.2.1 No training time needed
-Our goal is that a user installs the android application, opens it and is able to use all features without any explanation or help.
-
-#### 3.2.2 Familiar Feeling
-We want to implement an app with familiar designs and functions. This way the user is able to interact in familiar ways with the app without having to get to know new interfaces.
+We plan on designing the user interface as intuitive and self-explanatory as possible.
+Though there will be online support, it should not be necessary to use it. Games usually
+share similar controls or concepts. We build on this familiarity.
 
 ### 3.3 Reliability
 
 #### 3.3.1 Availability
-The server shall be available 95% of the time. This also means we have to figure out the "rush hours" of our app because the downtime of the server is only tolerable when as few as possible players want to use the app.
+The multiplayer servers shall be available at any time.
 
 #### 3.3.2 Defect Rate
-Our goal is that we have no loss of any data. This is important so that the game sessions can carry on, even after a downtime of the server.
+Losing data due to defects or crashed is annoying and deminishes the fun experienced with the game.
+Hence, we try our best to backup the data with little overhead to preserve the game state.
 
 ### 3.4 Perfomance
-
-#### 3.4.1 Capacity
-The system should be able to manage thousands of requests. Also it should be possible to register as many users as necessary.
-
-#### 3.4.2 Storage 
-Smartphones don't provide much storage. Therefore we are aiming to keep the needed storage as small as possible.
-
-#### 3.4.3 App perfomance / Response time
-To provide the best App perfomance we aim to keep the response time as low as possible. This will make the user experience much better.
+The game will be pretty simple regarding graphics. Unity is a well-developed game engine, which
+already handles a lot of the computation extensive and fine-grained processes and as such also
+specialized on optimizing them. Performance should therefore not be a problem. Adhearing to common
+procedures, when implementing multiplayer functionality for example, prevents going through the roof.
+However, the game will be thoughtfully engineered, so that it only consumes the resources it really needs.
 
 ### 3.5 Supportability
 
 #### 3.5.1 Coding Standards
-We are going to write the code by using all of the most common clean code standards. For example we will name our variables and methods by their functionalities. This will keep the code easy to read by everyone and make further developement much easier.
+Code clearness and expressiveness are important. They let one easily understand the code and
+make it easier to find bugs. As a guideline, we use the Google coding conventions.
 
 #### 3.5.2 Testing Strategy
-The application will have a high test coverage and all important functionalities and edge cases should be tested. Further mistakes in the implementation will be discovered instantly and it will be easy to locate the error. 
+It is important to us to have highly maintainable and high quality code.
+For this, we strive for a high test coverage and use extensive testing,
+on the technical, as well as on the interactive game part of the game.
+Having an eye on quality helps us to save time debugging and helps to
+prevent the degrading of the player experience due to bugs.
+Apart from unit testing, there must also be conceptual testing, to make
+sure that the game is actually fun.
 
 ### 3.6 Design Constraints
-We are trying to provide a modern and easy to handle design for the UI aswell as for the architecture of our application. To achieve that the functionalities will be kept as modular as possible.
+We strive for clean code and a modular design. For this, we use Google coding conventions as guidelines.
+Using Unity forces us to program in C#, a language very similar to Java.
 
-Because we are progamming an Android App we chose Java as our programming language. Also we are using the common MVC-architecture to keep the front end and back end seperated. For a clean front end structure we use MVVM.
-To make the communication between the two parts easy, we will implement a RESTful-API between them which will provide the data in JSON-Format. 
-The supported Platforms will be:
-- Android 4.4 and higher
-- Java 8 and higher
-
-### 3.7 On-line User Documentation and Help System Requirements
-The usage of the app should be as intuitive as possible so it won't need any further documentation. If the user needs some help we will implement a "Help"-Button in the App which includes a FAQ and a formular to contact the developement team.
+### 3.7 Online User Documentation and Help System Requirements
+The controls and navigation in the game will be intuitive and close
+to other well-known games. However, there will be a short documentation
+explaining basic controls.
 
 ### 3.8 Purchased Components
-We don't have any purchased components yet. If there will be purchased components in the future we will list them here.
+We do not have any purchased components yet. In the course of development, we might decide
+to rent servers for multiplayer functionality.
 
 ### 3.9 Interfaces
 
 #### 3.9.1 User Interfaces
-The User interfaces that will be implented are:
-- Dashboard - lists all session and makes it possible to filter sessions
-- Session Page - shows detailed information about the session and makes it possible to connect session attendants for example via messaging system
-- Login - this page is used to log in 
-- Register - provides a registration form
-- Overwiew of personal sessions - shows all the sessions a user participates in
-- Friend List - friends can be added
-- Profile - makes it possible to post information about yourself, might provide messaging feature, also shows additional information about users (for example: Language, country, favorite games, etc.)
-- Settings - shows the settings
+The UIs to be implemented are:
+- Menu
+- Game Settings
+- Skill Tree
 
 #### 3.9.2 Hardware Interfaces
 (n/a)
 
 #### 3.9.3 Software Interfaces
-The app will be runnable on Android 4.4 and higher. iOS won't be featured at the moment.
+The game is developed using Unity. As such, it can be ported onto multiple platforms, including known
+operating systems like MacOS, GNU/Linux, TempleOS and Windows, as well as to mobile devices running Android or iOS.
+Additionally, it could also be run in browsers.
 
-#### 3.9.4 Communication Interfaces
-The server and hardware will communicate using the http protocol. 
+#### 3.9.4 Communication Interfaces (networking?)
 
-### 3.10 Licensing Requirements
+### 3.10 Licensing Requirements (?)
 
 ### 3.11 Legal, Copyright, and Other Notices
-The logo is licensed to the Common Playground Team and is only allowed to use for the application. We do not take responsibilty for any incorrect data or errors in the application.
+The logo and name of "Wizards vs. Robots" are propery of its development team and as such are only
+allowed to be used commercially in this context.
 
 ### 3.12 Applicable Standards
-The development will follow the common clean code standards and naming conventions. Also we will create a definition of d which will be added here as soon as its complete.
+The development follows the Google coding conventions of clean code.
 
 ## 4. Supporting Information
-For any further information you can contact the Common Playground Team or check our [Common Playground Blog](http://commonplayground.wordpress.com). 
-The Team Members are:
-- Celina Adam
-- Inga Batton
-- Nils Krehl 
-- Denis Reibel
+For any further information you can contact the "Wizards vs. Robots" team or check our [Wizards vs. Robots](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/). 
+The members are:
+- Lukas Rapp
+- Dominik Ochs
+- Philipp Reichert
+- Leon Neumann
 
 <!-- Picture-Link definitions: -->
 [OUCD]: https://github.com/IB-KA/CommonPlayground/blob/master/UseCaseDiagramCP.png "Overall Use Case Diagram"
