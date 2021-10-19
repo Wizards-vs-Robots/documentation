@@ -30,11 +30,11 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-This Software Requirements Specification (SRS) describes all specifications for the application "Common Playground". It includes an overview about this project and its vision, detailed information about the planned features and boundary conditions of the development process.
+This Software Requirements Specification (SRS) describes all specifications for the video game _Wizards vs. Robots_. It includes an overview of this project, its vision and detailed information about the planned features and boundary conditions of the development process.
 
 
 ### 1.2 Scope
-The project is going to be realized as an Android App.  
+The project is going to be realized foremost as a desktop game with ports to handhelds such as phones and tablets.  
   
 Actors of this App can be users or moderators.  
   
