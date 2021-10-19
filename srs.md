@@ -1,4 +1,4 @@
-# Common Playground - Software Requirements Specification 
+# Wizards vs. Robots - Software Requirements Specification 
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
@@ -34,14 +34,14 @@ This Software Requirements Specification (SRS) describes all specifications for 
 
 
 ### 1.2 Scope
-The project is going to be realized foremost as a desktop game with ports to handhelds such as phones and tablets.  
+The project is going to be realized primarily as a desktop game with ports to handhelds such as phones and tablets with operating system support for Linux, Windows and Darwin based operating systems.  
   
-Actors of this App can be users or moderators.  
+Actors of this game can be _players_ or _coop players_.  
   
-Planned Subsystems are: 
-* Notice Board:  
+Planned subsystems: 
+* Menu:  
 The notice board is the essential part of the user interface. Game sessions should be visualized as postings including relevant information about the session. Those should be partly standardized by a form with a free text option for specifics. The data must be stored accordingly.
-* Account System:  
+* Level design:  
 Users can create accounts so sessions can be connected to a person as well as to join requests. User data must be stored alongside the posting data.
 * Friend List and User Rating:  
 Once the account system is created there will be the option to mark users as favorites. Also users or game sessions should get a rating to counter abuse.
