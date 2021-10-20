@@ -44,11 +44,11 @@ The _menu_ constitutes the main entry point of the game and allows for setting p
 * Level design:  
 The _level design_ system allows for different playable maps for the _player_. These maps can be optionally chosen after starting a game. (See _1.2 Scope > Menu_ for more details). _Level design_ also refers to the system required to add new maps to the game.
 * In-game overlay:  
-The _in-game overlay_ system provides the _player_ with a wealth of essential information (such as health [hit points] of the player or mana [points required for casting spells]) for making decisions in the game. It also provides a pause or exit option by calling the _menu_ (as described in _1.2 Scope > Menu_).
+The _in-game overlay_ system provides the _player_ with a wealth of essential information (such as health [hit points] of the player or Mana [points required for casting spells]) for making decisions in the game. It also provides a pause or exit option by calling the _menu_ (as described in _1.2 Scope > Menu_).
 * Robots:  
 _Robots_ are the adversaries of the wizards (see _1.2 Scope > Wizard_) in the game. The _player_ tries to fight these using the _wizard_ sub-system. The _robots_ sub-system consists of many individual robot instances. Each robot belongs to a certain class of robots with certain properties and rewards for defeating them. The robots can move freely throughout the map (see _1.2 Scope > Level design_) and target the wizards and try to harm them in some way. This sub-system is also responsible for making the robots collectively harder to fight, as the player progresses.
 * Wizard:  
-_Wizards_ represent the _player_ in the game. Each _player_ is represented by exactly one wizard. Wizards can - controlled by the player - move around freely in the environment specified by the map (see _1.2 Scope > Level design_). Wizards can cast and dynamically switch between spells in an effort to fight robots using mana (see _1.2 Scope > In-game overlay_ for more info regarding mana). Wizards can also have different looks (skins). 
+_Wizards_ represent the _player_ in the game. Each _player_ is represented by exactly one wizard. Wizards can - controlled by the player - move around freely in the environment specified by the map (see _1.2 Scope > Level design_). Wizards can cast and dynamically switch between spells in an effort to fight robots using Mana (see _1.2 Scope > In-game overlay_ for more info regarding Mana). Wizards can also have different looks (skins). 
 * Player progression system:  
 The _player progression system_ is responsible for making the wizards of the players stronger, whereas the robots sub-system makes the robots progressively stronger. This system makes it possible to strike a balance and allow the player's wizard to keep up with the robots. To this end, spells and skills are unlocked using a currency obtained by defeating robots (See _1.2 Scope > Robots -> Robot classes and rewards_). The player can track the progression displayed by this system.
 * Multiplayer:  
@@ -56,25 +56,32 @@ The _multiplayer_ sub-system allows for another _player_ (a _coop player_) to jo
 
 
 ### 1.3 Definitions, Acronyms and Abbreviations
-| Abbrevation | Explanation                            |
-| ----------- | -------------------------------------- |
-| SRS         | Software Requirements Specification    |
-| UC          | Use Case                               |
-| n/a         | not applicable                         |
-| tbd         | to be determined                       |
-| UCD         | overall Use Case Diagram               |
-| FAQ         | Frequently asked Questions             |
+| Abbreviation | Explanation                            |
+| ------------ | -------------------------------------- |
+| HP           | Health Points                          |
+| MP           | Mana Points                            |
+| EXP, XP      | Experience Points                      | 
+| SRS          | Software Requirements Specification    |
+| UC           | Use Case                               |
+| n/a          | not applicable                         |
+| tbd          | to be determined                       |
+| UCD          | overall Use Case Diagram               |
+| FAQ          | Frequently asked Questions             |
+
+* Mana: Resource needed to cast spells. Quantifiable through MP. 
+* Health: Indicator for the physical condition of an entity (robot or wizard). Quantifiable through HP. If HP drops to 0, the entity is defeated.
 
 ### 1.4 References
 
 | Title                                                              | Date       | Publishing organization   |
 | -------------------------------------------------------------------|:----------:| ------------------------- |
-| [Common Playground Blog](http://commonplayground.wordpress.com)    | 18.10.2018 | Common Playground Team    |
-| [GitHub](https://github.com/nilskre/CommonPlayground)              | 18.10.2018 | Common Playground Team    |
+| [Wizards vs. Robots Blog](https://4kills.wordpress.com/)           | 20.10.2021 | Wizards vs. Robots Team   |
+| [GitHub](https://github.com/Wizards-vs-Robots)                     | 20.10.2021 | Wizards vs. Robots Team   |
+| [YouTrack](https://dhbw-karlsruhe.myjetbrains.com/youtrack/projects/543ba1b3-c283-44c7-b884-c7a436f66079) | 20.10.2021 | Wizards vs. Robots Team |
 
 
 ### 1.5 Overview
-The following chapter provides an overview of this project with vision and Overall Use Case Diagram. The third chapter (Requirements Specification) delivers more details about the specific requirements in terms of functionality, usability and design parameters. Finally there is a chapter with supporting information. 
+The following chapter provides an overview of this project with vision and OUCD (Overall Use Case Diagram). The third chapter (Requirements Specification) delivers more details about the specific requirements in terms of functionality, usability and design parameters. Lastly, there is a chapter with supporting information. 
     
 ## 2. Overall Description
 
