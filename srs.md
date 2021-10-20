@@ -36,21 +36,24 @@ This Software Requirements Specification (SRS) describes all specifications for 
 ### 1.2 Scope
 The project is going to be realized primarily as a desktop game with ports to handhelds such as phones and tablets with operating system support for Linux, Windows and Darwin based operating systems.  
   
-Actors of this game can be _players_ or _coop players_.  
+Actors of this game can be _players_ or _coop players_. Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
   
 Planned subsystems: 
 * Menu:  
-The notice board is the essential part of the user interface. Game sessions should be visualized as postings including relevant information about the session. Those should be partly standardized by a form with a free text option for specifics. The data must be stored accordingly.
+The _menu_ constitutes the main entry point of the game and allows for setting preferences (_settings_), viewing performance in previous games (_highscores_) and starting a new game. Starting a game allows for adjusting _optional settings_ for this round of the game. 
 * Level design:  
-Users can create accounts so sessions can be connected to a person as well as to join requests. User data must be stored alongside the posting data.
-* Friend List and User Rating:  
-Once the account system is created there will be the option to mark users as favorites. Also users or game sessions should get a rating to counter abuse.
-* Connecting People:  
-The host of a game session has to be notified when someone wants to join their game. Both must then be able to get in touch to organize the details, so messages between the host and the guest have to be enabled. This could be done via automated emails or a custom in-app system. For this an account system is needed.
-* Storing Data:  
-User data for accounts and possibly profiles has to be stored. Also the game sessions have to be stored as datasets containing the form contents and possibly contact data. The data storage will form the foundation for the visualization, account system and the search feature.
-* Finding your Game:  
-We need a tag system so everyone looking to join a game can search for the kind of games they are interested in. Possibly other aspects can be searchable, such as place or date. Tags must be stored and a search function developed. 
+The _level design_ system allows for different playable maps for the _player_. These maps can be optionally chosen after starting a game. (See _1.2 Scope > Menu_ for more details). _Level design_ also refers to the system required to add new maps to the game.
+* In-game overlay:  
+The _in-game overlay_ system provides the _player_ with a wealth of essential information (such as health [hit points] of the player or mana [points required for casting spells]) for making decisions in the game. It also provides a pause or exit option by calling the _menu_ (as described in _1.2 Scope > Menu_).
+* Robots:  
+_Robots_ are the adversaries of the wizards (see _1.2 Scope > Wizard_) in the game. The _player_ tries to fight these using the _wizard_ sub-system. The _robots_ sub-system consists of many individual robot instances. Each robot belongs to a certain class of robots with certain properties and rewards for defeating them. The robots can move freely throughout the map (see _1.2 Scope > Level design_) and target the wizards and try to harm them in some way. This sub-system is also responsible for making the robots collectively harder to fight, as the player progresses.
+* Wizard:  
+_Wizards_ represent the _player_ in the game. Each _player_ is represented by exactly one wizard. Wizards can - controlled by the player - move around freely in the environment specified by the map (see _1.2 Scope > Level design_). Wizards can cast and dynamically switch between spells in an effort to fight robots using mana (see _1.2 Scope > In-game overlay_ for more info regarding mana). Wizards can also have different looks (skins). 
+* Player progression system:  
+The _player progression system_ is responsible for making the wizards of the players stronger, whereas the robots sub-system makes the robots progressively stronger. This system makes it possible to strike a balance and allow the player's wizard to keep up with the robots. To this end, spells and skills are unlocked using a currency obtained by defeating robots (See _1.2 Scope > Robots -> Robot classes and rewards_). The player can track the progression displayed by this system.
+* Multiplayer:  
+The _multiplayer_ sub-system allows for another _player_ (a _coop player_) to join in on the game of a _player_ and control their own wizard. This way, multiple players' wizards can fight robots together, which also means that the robots will be stronger than in a single player round to account for the additional wizard. The multiplayer will be possible as a same-machine multiplayer (i.e. two players playing on the same computer with their own inputs) and as an online multiplayer with multiple devices. 
+
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 | Abbrevation | Explanation                            |
@@ -253,4 +256,4 @@ The members are:
 - Leon Neumann
 
 <!-- Picture-Link definitions: -->
-[OUCD]: https://github.com/IB-KA/CommonPlayground/blob/master/UseCaseDiagramCP.png "Overall Use Case Diagram"
+[OUCD]: ./ucd.svg "Overall Use Case Diagram"
