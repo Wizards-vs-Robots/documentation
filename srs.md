@@ -86,44 +86,42 @@ The following chapter provides an overview of this project with vision and OUCD 
 ## 2. Overall Description
 
 ### 2.1 Vision
-Inspired by carpool coordination services like ‘BlaBlaCar’ or ‘Mitfahrzentrale’ we want to build an application to coordinate game sessions. We plan to create a platform for people who are looking for other people to play games with. Covering online multiplayer games, tabletop, pen and paper or regular board games we want to provide a kind of bulletin board where people can state what they want to play, when and where they want to do it and how many people they are looking for. Others can then react to the postings and virtually join the play session to be connected by us so everyone can coordinate the actual play session together on a Common Playground.
+Please refer to [our first blog entry](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/) for information on our vision for this product. 
 
 ### 2.2 Use Case Diagram
 
 ![OUCD](./ucd.svg)
 
-- Green: Planned till end of december
-- Yellow: Planned till end of june
+- Green: Planned till end of December 2021
+- Yellow: Planned till end of June 2022
 
 ### 2.3 Technology Stack
 The technology we use is:
 
 Backend:
--Gradle and Springboot
--H2 Database
+-Go
+-Database (type and specific DB tbd)
+-Docker, DockerCompose
 
 Frontend:
--Android with Java and XML
+-Unity
 
 IDE:
--IntelliJ and Android Studio
+-JetBrain's Rider, Unity
 
 Project Management:
 -YouTrack
 -GitHub
--Microsoft Teams
+-Discord
 
 Deployment:
--Travis CI
--Docker and Heroku
+-CD with Github Actions
+-Docker, DockerCompose
 
 Testing:
--Cucumber
--Espresso
--JUnit
--Codacy
--CodeMR
--RestAssured
+-C# Unit Testing Framework
+-Go Unit Testing Framework
+-CI with Github Actions
 
 ## 3. Specific Requirements
 
