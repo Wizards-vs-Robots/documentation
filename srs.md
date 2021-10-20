@@ -127,50 +127,53 @@ Testing:
 
 ### 3.1 Functionality
 In this section, our different use cases are explained. A structured representation can be found in the previous section.
-Until June, we plan to have the following implemented:
-- 3.1a) Menu
-- 3.1b) Level Design
-- 3.1c) Robots
-- 3.1d) Wizards
-- 3.1e) Player Progression System
-- 3.1f) Multiplayer
+For this project, we plan to implement the following:
+- 3.1 a) Menu
+- 3.1 b) In-Game Overlay
+- 3.1 c) Level Design
+- 3.1 d) Robots
+- 3.1 e) Wizards
+- 3.1 f) Player Progression System
+- 3.1 g) Multiplayer
 
 However, some of these aspects have parts that are not included in the scope
-until December of this year. Hence, each aspect will be described along with
+until December of this year, or June of next year, respectively. Hence, each aspect will be described along with
 the respective scopes.
 
-#### 3.1a) Menu
+#### 3.1 a) Menu
 To keep things simple, at first the player will only be given the possibility to
 start a singleplayer game (1st semester). In the following semester, local highscores
 and settings shall also be inspectible from the menu. Last but not least, as an
 additional feature, the player should also be able to start multiplayer games.
 
-#### 3.1b) Level Design
-Since this project is a game, there must be levels. The player must be able to see his
-score and his health. Levels should also have different styles, but this is an additional feature.
+#### 3.1 b) In-Game Overlay
+The player must be able to see his score, health (HP) and Mana (MP) in order to make decisions. Additionally, it should be possible to go the the _menu_ at any time. This is a core feature included in the scope for December.
 
-#### 3.1c) Robots
-The robots are the evil enemies in this game, which must be defeated. In order to make the game more
+#### 3.1 c) Level Design
+Levels should also have different styles (i.e. different layouts/maps), but this is an additional feature.
+
+#### 3.1 d) Robots
+The robots are the adversaries in this game, which must be defeated. In order to make the game more
 engaging, there will be different robot classes with different defining attributes (1st semester).
-Rewarding the player and making the game progressively harder is on the agenda for the second half of
-the project (2nd semester). Defeating different robots should yield different interesting buffs or
-items to help defeat the strenghening enemy party. Making the enemy waves more and more difficult
-makes the game more engaging. Additionally, we want smoothly animated robots (additional feature).
+Rewarding the player and making the game progressively harder is on the agenda for the second part of
+the project (2nd semester). Defeating different robots should yield different interesting rewards (buffs or
+items) to help defeat the strenghening enemy party (2nd semester). Making the enemy waves more and more difficult
+makes the game more engaging. Additionally, we want fancily animated robots (additional feature).
 
-#### 3.1d) Wizard
+#### 3.1 e) Wizard
 The game's protagonists are wizards. They defeat the robots using their spells and magic. Hence,
-the player character must be able to be moved in a simple manner and to cast spells and curses (1st semester).
+the player character must be able to be moved in a simple manner and to cast spells (1st semester).
 In order to help fighting the progressivly stronger waves, the wizard will be equipped with more diverse
-spells, which all have different aspects and tricks (2nd semester). Lastly, in addition, also the wizard
-shall be smoothly animated and it should be possible to use different cosmetics on him.
+spells, which all have different aspects (2nd semester). Lastly, in addition, also the wizard
+shall be fancily animated and it should be possible to have different skins for them.
 
-#### 3.1e) Player Progression System
+#### 3.1 f) Player Progression System
 At first, the game should work in a basic manner. Therefore, the progression system will be part of the
 development in the second semester. There will be a skill tree, which gives an overview of what skills
 are to be unlocked, what and how much has to be done to do so and which skills are alraedy usable. It
 gives the game more depth. Besides, the player should be able to get a preview on the unlockable skills (additional feature).
 
-#### 3.1f) Multiplayer
+#### 3.1 g) Multiplayer
 Implementing multiplayer for games is not a trivial task. As such, it is postponed until the second semester.
 At first, local multiplayer will be made possible, then online multiplayer. This will also bring more depth
 to the game, since first, one can now play with others and communicate with them and second playing together
@@ -179,15 +182,17 @@ will have some inherent effects on the game like stronger waves.
 ### 3.2 Usability
 We plan on designing the user interface as intuitive and self-explanatory as possible.
 Though there will be online support, it should not be necessary to use it. Games usually
-share similar controls or concepts. We build on this familiarity.
+share similar controls or concepts. We want to build on this familiarity.
+
+For accessibility, texts should be not too small and well readable. The game shouldn't rely on red to green contrasts, in order to not exclude red-green color blind people.
 
 ### 3.3 Reliability
 
 #### 3.3.1 Availability
-The multiplayer servers shall be available at any time.
+The multiplayer servers aim for a availability of >99%. This includes possible well-known hosts in case of peer-to-peer / community hosted multiplayer servers.
 
 #### 3.3.2 Defect Rate
-Losing data due to defects or crashed is annoying and deminishes the fun experienced with the game.
+Losing data due to defects or crashes is annoying and deminishes the fun experienced with the game.
 Hence, we try our best to backup the data with little overhead to preserve the game state.
 
 ### 3.4 Perfomance
@@ -253,7 +258,7 @@ allowed to be used commercially in this context.
 The development follows the Google coding conventions of clean code.
 
 ## 4. Supporting Information
-For any further information you can contact the "Wizards vs. Robots" team or check our [Wizards vs. Robots](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/). 
+For any further information you can contact the "Wizards vs. Robots" team or check our [Wizards vs. Robots blog](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/). 
 The members are:
 - Lukas Rapp
 - Dominik Ochs
