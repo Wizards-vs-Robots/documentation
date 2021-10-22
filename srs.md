@@ -140,7 +140,7 @@ The robots are the adversaries in this game, which must be defeated. In order to
 engaging, there will be different robot classes with different defining attributes (1st semester).
 Rewarding the player and making the game progressively harder is on the agenda for the second part of
 the project (2nd semester). Defeating different robots should yield different interesting rewards (buffs or
-items) to help defeat the strenghening enemy party (2nd semester). Making the enemy waves more and more difficult
+items) to help defeat the strengthening enemy party (2nd semester). Making the enemy waves more and more difficult
 makes the game more engaging. Additionally, we want fancily animated robots (additional feature).
 
 #### 3.1 e) Wizard
