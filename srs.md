@@ -34,7 +34,7 @@ This Software Requirements Specification (SRS) describes all specifications for 
 
 
 ### 1.2 Scope
-The project is going to be realized primarily as a desktop game with ports to handhelds such as phones and tablets with operating system support for Linux, Windows and Darwin based operating systems.  
+The project is going to be realized primarily as a desktop game with ports to handhelds such as phones and tablets with operating system support for GNU/Linux, Windows and Darwin based operating systems.  
   
 Actors of this game can be _players_ or _coop players_. Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
   
@@ -67,6 +67,7 @@ The _multiplayer_ sub-system allows for another _player_ (a _coop player_) to jo
 | tbd          | to be determined                       |
 | UCD          | overall Use Case Diagram               |
 | FAQ          | Frequently asked Questions             |
+| UT	       | Unit Testing				|
 
 * Mana: Resource needed to cast spells. Quantifiable through MP. 
 * Health: Indicator for the physical condition of an entity (robot or wizard). Quantifiable through HP. If HP drops to 0, the entity is defeated.
@@ -96,32 +97,14 @@ Please refer to [our first blog entry](https://4kills.wordpress.com/2021/10/05/w
 - Yellow: Planned till end of June 2022
 
 ### 2.3 Technology Stack
-The technology we use is:
+The technolgies we use are:
+| Backend 				| Frontend	| Development		| Project Management	| Deployment 			| Testing 		 |
+|---------------------------------------|---------------|-----------------------|-----------------------|-------------------------------|------------------------|
+| Go					| Unity		| Unity Editor		| YouTrack		| CD with GitHub Actions	| C# UT Framework	 |
+| Database (type and specific DB tbd)	|		| JetBrain's Rider	| GitHub		| Docker and DockerCompose	| Go UT Framework	 |
+| Docker and DockerCompose		|		|			| Discord		|				| CI with GitHub Actions |
 
-Backend:
--Go
--Database (type and specific DB tbd)
--Docker, DockerCompose
-
-Frontend:
--Unity
-
-IDE:
--JetBrain's Rider, Unity
-
-Project Management:
--YouTrack
--GitHub
--Discord
-
-Deployment:
--CD with Github Actions
--Docker, DockerCompose
-
-Testing:
--C# Unit Testing Framework
--Go Unit Testing Framework
--CI with Github Actions
+For further elaborations on some of these specifications, take a look at our recent [blog post](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/).
 
 ## 3. Specific Requirements
 
@@ -205,65 +188,98 @@ However, the game will be thoughtfully engineered, so that it only consumes the 
 ### 3.5 Supportability
 
 #### 3.5.1 Coding Standards
-Code clearness and expressiveness are important. They let one easily understand the code and
-make it easier to find bugs. As a guideline, we use the Google coding conventions.
+Code clearness and expressiveness are important to us.
+It makes one understand code more easily and more importantly,
+helps to prevent bugs. We settled on [Google Coding Conventions](https://google.github.io/styleguide/csharp-style.html), because
+they are well-known and thoughfully developed.
 
 #### 3.5.2 Testing Strategy
-It is important to us to have highly maintainable and high quality code.
-For this, we strive for a high test coverage and use extensive testing,
-on the technical, as well as on the interactive game part of the game.
-Having an eye on quality helps us to save time debugging and helps to
-prevent the degrading of the player experience due to bugs.
-Apart from unit testing, there must also be conceptual testing, to make
-sure that the game is actually fun.
+We strive for a very high test coverage and will be using extensive testing.
+Using [TDD](https://en.wikipedia.org/wiki/Test-driven_development), we enable ourselves to
+write precise and concise but effective tests, at the expense of investing time for test development
+before actually implementing something. However, this in turn possibly will safe us time.
+Furthermore, this strategy is widely adopted in
+the industry due to its possible side effects.
 
 ### 3.6 Design Constraints
-We strive for clean code and a modular design. For this, we use Google coding conventions as guidelines.
-Using Unity forces us to program in C#, a language very similar to Java.
+Due to the context, the project is restricted heavily in regards to time.
+Hence, the scope (see 3.1 Functionality) is rather restricted, but its items
+will be developed with care. Developing games is time-consuming, making a 2D pixel
+art game then helps us to cut down on time consumption because it will be easier
+to graphically design the product, make features and prevent game breaking bugs.
+The art style reflects the simplicity we self-imposed. Through this, the game
+will also be closer to its inspirations. Furthermore, Unity enables us to avoid
+imposed portability constraints, since it was developed, so that programs written
+in it can be deployed on almost every platform.
 
 ### 3.7 Online User Documentation and Help System Requirements
-The controls and navigation in the game will be intuitive and close
-to other well-known games. However, there will be a short documentation
-explaining basic controls.
+There will be documentation on how to interact with the system.
+However, since games are usually similar regarding controls, there
+will most likely be no need to use it.
 
 ### 3.8 Purchased Components
-We do not have any purchased components yet. In the course of development, we might decide
-to rent servers for multiplayer functionality.
+We have not purchased any components and will most likely
+not do so.
 
 ### 3.9 Interfaces
 
 #### 3.9.1 User Interfaces
-The UIs to be implemented are:
-- Menu
-- Game Settings
-- Skill Tree
+There will be multiple UIs in place: <br/>
+(1) <strong>Menu:</strong> It must first show some kind of loading screen and
+then pop into the overview of what you can do. Settings must be accessible, as
+well as an overview of the highscores and buttons to start single and a multi
+player games respectively. The buttons to start games should be centered, the
+interactables for highscores and game settings can be placed somewhere else.
+
+(2) <strong>Game Settings:</strong> This must show all options to be changable
+contained within a scrollbar if needed, so that one can iterate over the option
+list and toggle them easily.
+
+(3) <strong>Highscore Overview:</strong> This must show latest #n relevant highscores
+along with some additional information about which wave the wizard died in and possibly
+other interesting information.
+
+(4) <strong>Skill Tree:</strong> This will be an overlay, that can be activated
+when the game is running. It will show all skills that have been activated in
+this round and also shows how progression could go on, so it shows locked traits.
+All skills will be marked in either of three ways: <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(a) unlocked <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(b) unlockable (all skills in line before have been unlocked) <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(c) not unlockable (skill is and cannot be unlocked currently) <br/>
 
 #### 3.9.2 Hardware Interfaces
 (n/a)
 
 #### 3.9.3 Software Interfaces
-The game is developed using Unity. As such, it can be ported onto multiple platforms, including known
-operating systems like MacOS, GNU/Linux, TempleOS and Windows, as well as to mobile devices running Android or iOS.
-Additionally, it could also be run in browsers.
+The interface follows the MVC (Model-View-Controller) system.
+Furthermore, the project must be available on most platforms including
+browsers - Unity takes care of that. <br/>
+Local data (game state and highscores) must be stored using the JSON file format.
 
-#### 3.9.4 Communication Interfaces (networking?)
+#### 3.9.4 Communication Interfaces
+(n/a)
 
-### 3.10 Licensing Requirements (?)
+### 3.10 Licensing Requirements
+The project is under the <strong>GNU GPL2.0 license</strong>.
+```markdown
+You may copy, distribute and modify the software as long as
+you track changes/dates in source files. Any modifications
+to or software including (via compiler) GPL-licensed code
+must also be made available under the GPL along with build
+and install instructions.
+```
 
 ### 3.11 Legal, Copyright, and Other Notices
-The logo and name of "Wizards vs. Robots" are propery of its development team and as such are only
-allowed to be used commercially in this context.
+However, the logo and name of Wizards vs. Robots are property of its development team and as such
+it is not permitted to commercially use these outside the context of this project.
 
 ### 3.12 Applicable Standards
-The development follows the Google coding conventions of clean code.
+[Google Coding Conventions](https://google.github.io/styleguide/csharp-style.html)
 
 ## 4. Supporting Information
-For any further information you can contact the "Wizards vs. Robots" team or check our [Wizards vs. Robots blog](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/). 
+For any further information you can contact the "Wizards vs. Robots" organization or check our [Wizards vs. Robots blog](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/). 
 The members are:
 - Lukas Rapp
 - Dominik Ochs
 - Philipp Reichert
 - Leon Neumann
-
-<!-- Picture-Link definitions: -->
-[OUCD]: ./ucd.svg "Overall Use Case Diagram"
