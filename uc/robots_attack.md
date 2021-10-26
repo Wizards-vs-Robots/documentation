@@ -36,7 +36,7 @@ n/a
 
 # 4. Preconditions
 The preconditions for this use case are:
-1. The wave has started and the robots.
+1. The wave has started.
 2. The attacking robot has been spawned.
 3. There are living possible targets.
 
