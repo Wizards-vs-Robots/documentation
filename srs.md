@@ -36,7 +36,8 @@ This Software Requirements Specification (SRS) describes all specifications for 
 ### 1.2 Scope
 The project is going to be realized primarily as a desktop game with ports to handhelds such as phones and tablets with operating system support for GNU/Linux, Windows and Darwin based operating systems.  
   
-Actors of this game can be _players_ or _coop players_. Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
+Actors of this game can be _players_ or _coop players_ for the overal use case diagram that looks at the system from a player's persepctive for readability. For more details, the actors _game_ (as abstract entity) and _ai_ (artificial intelligence (for the robots)) will be used for additional detail and clarity when defining the use cases.      
+Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
   
 Planned subsystems: 
 * Menu:  
@@ -61,6 +62,7 @@ The _multiplayer_ sub-system allows for another _player_ (a _coop player_) to jo
 | HP           | Health Points                          |
 | MP           | Mana Points                            |
 | EXP, XP      | Experience Points                      | 
+| AI, ai       | Artificial Intelligence                |
 | SRS          | Software Requirements Specification    |
 | UC           | Use Case                               |
 | n/a          | not applicable                         |
@@ -91,6 +93,8 @@ Please refer to [our first blog entry](https://4kills.wordpress.com/2021/10/05/w
 
 ### 2.2 Use Case Diagram
 
+In the following use case diagram we have only considered _player_ actors in order to improve readability and to depict what the system looks like from the perspective of a player. For more details there will be additional actors to clarify how the system works in terms of activity diagrams and the likes. 
+
 ![OUCD](./ucd.svg)
 
 - Green: Planned till end of December 2021
@@ -107,34 +111,53 @@ The technolgies we use are:
 For further elaborations on some of these specifications, take a look at our recent [blog post](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/).
 
 ## 3. Specific Requirements
-
 ### 3.1 Functionality
-In this section, our different use cases are explained. A structured representation can be found in the previous section.
-For this project, we plan to implement the following:
-- 3.1 a) Menu
-- 3.1 b) In-Game Overlay
-- 3.1 c) Level Design
-- 3.1 d) Robots
-- 3.1 e) Wizards
-- 3.1 f) Player Progression System
-- 3.1 g) Multiplayer
+This sections presents different use cases that can be found in the [UCD](./ucd.svg).
+Some aspects of the project are set to be finished until December 2021 (1st semester),
+others have to be done until June 2022 (2nd semester) and some are additional features
+that are planned to be implemented but have no deadline and hence could as well be not
+implemented if the plan is to strict. <br/>
 
-However, some of these aspects have parts that are not included in the scope
-until December of this year, or June of next year, respectively. Hence, each aspect will be described along with
-the respective scopes.
+#### 3.1.1 a) Main Menu
+It allows for entering the settings and the highscore menues.
+Furthermore, single and multiplayer games can be started.
+It is a core feature in the scope for December.
 
-#### 3.1 a) Menu
-To keep things simple, at first the player will only be given the possibility to
-start a singleplayer game (1st semester). In the following semester, local highscores
-and settings shall also be inspectible from the menu. Last but not least, as an
-additional feature, the player should also be able to start multiplayer games.
+#### 3.1.1 b) Pause Menu
+It shows what the player can do. There should be the possibility to enter the settings menu,
+to force-save the game, to leave the game and close the connection if the player is connected
+to a multiplayer session or to simply resume the game.
+It is included in the scope for June.
 
-#### 3.1 b) In-Game Overlay
-The player must be able to see his score, health (HP) and Mana (MP) in order to make decisions. Additionally, it should be possible to go the the _menu_ at any time. This is a core feature included in the scope for December.
+#### 3.1.1 c) Settings Menu
+It shows configurations for the game - these are being loaded from a local configuration file.
+Options can be changed and if changes are approved via a "Save" button, the changes are stored
+in the configuration file.
+Options could be displayed in a scrollable fashion if they don't all fit on the screen directly.
+It is included in the scope for June.
 
-#### 3.1 c) Level Design
+#### 3.1.1 d) Highscore Menu
+It shows local highscores and matching relevant information like for example the wave count,
+the currency farmed in total, or the skills that the wizard unlocked.
+It is included in the scope for June.
+
+#### 3.1.1 e) Game Overlay
+It shows relevant information about the player's score, his health (HP) and
+mana (HP), which helps him make decisions. Additionally, it must be possible
+to switch from it into the "Pause Menu". <br/>
+It is a core feature in the scope for December.
+
+#### 3.1.1 f) Skill Tree Menu
+It shows the current skill tree. The player can see which traits can be unlocked
+and which are already active. unlockable traits shall be selectable via clicking.
+When a skill has been clicked, a prompt should open asking if the skill should
+be unlocked. <br/>
+It is included in the scope for June.
+
+#### 3.1.2 Level Design
 Levels should also have different styles (i.e. different layouts/maps), but this is an additional feature.
 
+<<<<<<< HEAD
 #### 3.1 d) Robots
 The robots are the adversaries in this game, which must be defeated. In order to make the game more
 engaging, there will be different robot classes with different defining attributes (1st semester).
@@ -161,29 +184,69 @@ Implementing multiplayer for games is not a trivial task. As such, it is postpon
 At first, local multiplayer will be made possible, then online multiplayer. This will also bring more depth
 to the game, since first, one can now play with others and communicate with them and second playing together
 will have some inherent effects on the game like stronger waves.
+=======
+#### 3.1.3 Robots
+These are the adversaries in the game, which must be defeated. Robots come closer and closer to the player and try to kill him,
+this is set out to be done by December. <br/>
+The game generated consecutively stronger waves of more diverse and more robots, especially if another wizard
+joins the game, in order to account for the support. Killing robots yields different interesting rewards like buffs,
+items or experience, which in turn will help developing the skill tree. Both aspects are in the scope for June. <br/>
+Additionally, there must be different kinds of robots with specific style, attributes and attacks.
+
+#### 3.1.4 Wizard
+The protagonist is the wizard. <br/>
+First, the player shall be movable and able to cast some basic spells, depleting the mana he has.
+To help fight progressively stronger waves, trhe wizard will be equipped with more diverse spells,
+which have different aspects to them.
+When running multiplayer games, other wizards should be able to join and physical interactions
+like blocking the way or simply seeing each other must be possible - this is set out to be done by June. <br/>
+Additionally, there could be skins and animations are strived for.
+
+#### 3.1.5 Multiplayer
+Game sessions can be started as singleplayer and can then be expanded to multiplayer or
+be started explicitely as such. There is local multiplayer using different keyboard bindings,
+multiplayer hosted by the client that started the singleplayer sessions and multiplayer using
+a server. <br/>
+Local multiplayer is included in the scope until June, online multiplayer is an additional feature.
+Online multiplayer would use a session ID, which can be given to others to connect to the session.
+The client starting a multiplayer session is the session owner and has the right to remove people
+from the session. <br/>
+However players might join the game, waves get stronger when there are more wizards - this feature,
+however, is also scoped for June.
+>>>>>>> b8a01e55305cf804585c14776aaf78d723ff417c
 
 ### 3.2 Usability
-We plan on designing the user interface as intuitive and self-explanatory as possible.
-Though there will be online support, it should not be necessary to use it. Games usually
-share similar controls or concepts. We want to build on this familiarity.
-
-For accessibility, texts should be not too small and well readable. The game shouldn't rely on red to green contrasts, in order to not exclude red-green color blind people.
+The design shall be simple and intuitive.
+It will be similar to the experience and controls of other games,
+there are some de-facto standards. However, if further help is required, there will be resources. <br/>
+For accessibility, texts must be readable. Additionally, the game shouldn't rely on red to green contrasts in order to
+provide a comfortable gaming experience for red-green color blind people.
 
 ### 3.3 Reliability
 
 #### 3.3.1 Availability
-The multiplayer servers aim for a availability of >99%. This includes possible well-known hosts in case of peer-to-peer / community hosted multiplayer servers.
+When operating multiplayer games, the server should be available all the time. <br/>
+Apart from that, there is no online service and hence no availability issues.
 
 #### 3.3.2 Defect Rate
-Losing data due to defects or crashes is annoying and deminishes the fun experienced with the game.
-Hence, we try our best to backup the data with little overhead to preserve the game state.
+Regularly, there must be saves made in order to reduce the amount of data being lost
+during a game crash. Making these backups has to have little overhead, so that it will
+not be recognizable in the game by a lag spike. At most, there should be some icon to
+indicate that a backup is being made. <br/>
+Furthermore, there the amount of bugs shall be very low - game defects are to be found
+using extensive testing.
 
-### 3.4 Perfomance
-The game will be pretty simple regarding graphics. Unity is a well-developed game engine, which
-already handles a lot of the computation extensive and fine-grained processes and as such also
-specialized on optimizing them. Performance should therefore not be a problem. Adhearing to common
-procedures, when implementing multiplayer functionality for example, prevents going through the roof.
-However, the game will be thoughtfully engineered, so that it only consumes the resources it really needs.
+### 3.4 Performance
+There are no elaborate performance specifications other than having the game run
+with a respectable frame rate whilst leaving more than enough resources for other
+programs. In fact, the simplicity of the product will come with little performance
+penalty on the whole system, especially since it is based on a respected and well-
+optimized game engine. <br/>
+When running a multiplayer game, the connection to the host server must be stable.
+There will most likely be no heavy-lifting server-side, so that performance when
+hosting a multiplayer game will probably be no problem. <br/>
+Adhering to common implementation procedures and algorithms will help to keep low
+performance overhead.
 
 ### 3.5 Supportability
 
@@ -239,7 +302,7 @@ list and toggle them easily.
 along with some additional information about which wave the wizard died in and possibly
 other interesting information.
 
-(4) <strong>Skill Tree:</strong> This will be an overlay, that can be activated
+(4) <strong>Skill Tree Menu:</strong> This will be an overlay, that can be activated
 when the game is running. It will show all skills that have been activated in
 this round and also shows how progression could go on, so it shows locked traits.
 All skills will be marked in either of three ways: <br/>
