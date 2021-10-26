@@ -36,7 +36,7 @@ This Software Requirements Specification (SRS) describes all specifications for 
 ### 1.2 Scope
 The project is going to be realized primarily as a desktop game with ports to handhelds such as phones and tablets with operating system support for GNU/Linux, Windows and Darwin based operating systems.  
   
-Actors of this game can be _players_ or _coop players_. Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
+Actors of this game can be _players_, _coop players_, _game_ or _AI_. Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
   
 Planned subsystems: 
 * Menu:  
@@ -49,6 +49,8 @@ The _in-game overlay_ system provides the _player_ with a wealth of essential in
 _Robots_ are the adversaries of the wizards (see _1.2 Scope > Wizard_) in the game. The _player_ tries to fight these using the _wizard_ sub-system. The _robots_ sub-system consists of many individual robot instances. Each robot belongs to a certain class of robots with certain properties and rewards for defeating them. The robots can move freely throughout the map (see _1.2 Scope > Level design_) and target the wizards and try to harm them in some way. This sub-system is also responsible for making the robots collectively harder to fight, as the player progresses.
 * Wizard:  
 _Wizards_ represent the _player_ in the game. Each _player_ is represented by exactly one wizard. Wizards can - controlled by the player - move around freely in the environment specified by the map (see _1.2 Scope > Level design_). Wizards can cast and dynamically switch between spells in an effort to fight robots using Mana (see _1.2 Scope > In-game overlay_ for more info regarding Mana). Wizards can also have different looks (skins). 
+* Robot progression system: 
+The _robot progression system_ defines mechanics in which robots may get stronger, spawn in waves or have different classes. It counteracts and balances the _player progression system_. 
 * Player progression system:  
 The _player progression system_ is responsible for making the wizards of the players stronger, whereas the robots sub-system makes the robots progressively stronger. This system makes it possible to strike a balance and allow the player's wizard to keep up with the robots. To this end, spells and skills are unlocked using a currency obtained by defeating robots (See _1.2 Scope > Robots -> Robot classes and rewards_). The player can track the progression displayed by this system.
 * Multiplayer:  
@@ -61,6 +63,7 @@ The _multiplayer_ sub-system allows for another _player_ (a _coop player_) to jo
 | HP           | Health Points                          |
 | MP           | Mana Points                            |
 | EXP, XP      | Experience Points                      | 
+| AI           | Artificial Intelligence                | 
 | SRS          | Software Requirements Specification    |
 | UC           | Use Case                               |
 | n/a          | not applicable                         |
@@ -161,6 +164,12 @@ Implementing multiplayer for games is not a trivial task. As such, it is postpon
 At first, local multiplayer will be made possible, then online multiplayer. This will also bring more depth
 to the game, since first, one can now play with others and communicate with them and second playing together
 will have some inherent effects on the game like stronger waves.
+
+#### 3.1 h) Robot Progression System
+This system should allow the robots to become stronger throughout the game in order to balance the _player progression_ system. 
+This includes the robots spawning in progressively harder waves, with a wider variety of robot classes that increase the difficutly for the player, 
+as some classes are harder to defeat than others. Additionally, robots should themselves become stronger by for example spawning in greater numbers. 
+Different robot classes will be realized by December, whereas the other mechanics will be realized by June. 
 
 ### 3.2 Usability
 We plan on designing the user interface as intuitive and self-explanatory as possible.
