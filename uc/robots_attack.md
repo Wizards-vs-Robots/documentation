@@ -1,6 +1,6 @@
 # Use-Case Specification: Robots Attacking
 
-# 1. Robots Attacking
+# 1. Fight Wizard
 
 ## 1.1 Brief Description
 This use case describes that the AI (embodied by robots) attacks the wizards.
@@ -38,10 +38,10 @@ n/a
 The preconditions for this use case are:
 1. The wave has started.
 2. The attacking robot has been spawned.
-3. There are living possible targets.
+3. There are possible targets.
 
 # 5. Postconditions
 The postconditions for this use case are:
-1. A robot is taking the optimal route to the targeted (depending on the robot class: low vitals or nearest) wizard.
+1. A robot is taking the optimal route to the targeted (depending on the robot class: e.g. low vitals, closest etc.) wizard.
 2. The target has been attacked if the robot was near enough.
 3. The AI has used all robots.
