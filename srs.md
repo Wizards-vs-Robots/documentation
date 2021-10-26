@@ -132,8 +132,13 @@ start a singleplayer game (1st semester). In the following semester, local highs
 and settings shall also be inspectible from the menu. Last but not least, as an
 additional feature, the player should also be able to start multiplayer games.
 
+UC Definitions:
+- [Starting a single player game](./uc/start_singleplayer.md).
+
 #### 3.1 b) In-Game Overlay
 The player must be able to see his score, health (HP) and Mana (MP) in order to make decisions. Additionally, it should be possible to go the the _menu_ at any time. This is a core feature included in the scope for December.
+
+UC Definitions:
 
 #### 3.1 c) Level Design
 Levels should also have different styles (i.e. different layouts/maps), but this is an additional feature.
@@ -146,12 +151,18 @@ the project (2nd semester). Defeating different robots should yield different in
 items) to help defeat the strengthening enemy party (2nd semester). Making the enemy waves more and more difficult
 makes the game more engaging. Additionally, we want fancily animated robots (additional feature).
 
+UC Definitions:
+- [Fight wizards](./uc/robots_attack.md).
+
 #### 3.1 e) Wizard
 The game's protagonists are wizards. They defeat the robots using their spells and magic. Hence,
 the player character must be able to be moved in a simple manner and to cast spells (1st semester).
 In order to help fighting the progressivly stronger waves, the wizard will be equipped with more diverse
 spells, which all have different aspects (2nd semester). Lastly, in addition, also the wizard
 shall be fancily animated and it should be possible to have different skins for them.
+
+UC Definitions:
+- [Cast spells](./uc/cast_spells.md).
 
 #### 3.1 f) Player Progression System
 At first, the game should work in a basic manner. Therefore, the progression system will be part of the
