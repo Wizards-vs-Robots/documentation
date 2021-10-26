@@ -13,11 +13,15 @@ This use case describes that the AI (embodied by robots) attacks the wizards.
 # 2. Flow of Events
 
 ## 2.1 Basic Flow
-- Users klicks on "Post new session"-button
-- "Post-Session"-template pops up
-- User fills in template
-- User klicks on "finish"-button
-- Session gets posted
+During each game tick (internal update), the following is done by the AI actor
+in order to attack the player:
+(a) select target
+(b) check if the target is in attack range
+(c1) if he is, then he tries to attack
+  (c1.1) if the target has a shielding buff, then the attack deals no
+  (c1.2) negative effect; otherwise, it does
+(c2) if he is not, then the robot calculates the optimal route to the target
+(d) the robot moves along the direction 
 
 ### Activity Diagram
 ![Activity Diagram](../activity_diagrams/robots_attack.svg)
