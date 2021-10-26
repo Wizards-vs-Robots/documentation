@@ -36,7 +36,8 @@ This Software Requirements Specification (SRS) describes all specifications for 
 ### 1.2 Scope
 The project is going to be realized primarily as a desktop game with ports to handhelds such as phones and tablets with operating system support for GNU/Linux, Windows and Darwin based operating systems.  
   
-Actors of this game can be _players_ or _coop players_. Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
+Actors of this game can be _players_ or _coop players_ for the overal use case diagram that looks at the system from a player's persepctive for readability. For more details, the actors _game_ (as abstract entity) and _ai_ (artificial intelligence (for the robots)) will be used for additional detail and clarity when defining the use cases.      
+Here, _coop player_ is merely another _player_ depicted differently in the UCD in order to emphasize different acting on the system once multiple players are involved in a game. When referred to _player_, _coop player_ is usually included unless otherwise stated.
   
 Planned subsystems: 
 * Menu:  
@@ -61,6 +62,7 @@ The _multiplayer_ sub-system allows for another _player_ (a _coop player_) to jo
 | HP           | Health Points                          |
 | MP           | Mana Points                            |
 | EXP, XP      | Experience Points                      | 
+| AI, ai       | Artificial Intelligence                |
 | SRS          | Software Requirements Specification    |
 | UC           | Use Case                               |
 | n/a          | not applicable                         |
@@ -90,6 +92,8 @@ The following chapter provides an overview of this project with vision and OUCD 
 Please refer to [our first blog entry](https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/) for information on our vision for this product. 
 
 ### 2.2 Use Case Diagram
+
+In the following use case diagram we have only considered _player_ actors in order to improve readability and to depict what the system looks like from the perspective of a player. For more details there will be additional actors to clarify how the system works in terms of activity diagrams and the likes. 
 
 ![OUCD](./ucd.svg)
 
