@@ -15,13 +15,13 @@ This use case describes that the AI (embodied by robots) attacks the wizards.
 ## 2.1 Basic Flow
 During each game tick (internal update), the following is done by the AI actor
 in order to attack the player:
-(a) select target
-(b) check if the target is in attack range
-(c1) if he is, then he tries to attack
-  (c1.1) if the target has a shielding buff, then the attack deals no
-  (c1.2) negative effect; otherwise, it does
-(c2) if he is not, then the robot calculates the optimal route to the target
-(d) the robot moves along the direction 
+(a) select target <br/>
+(b) check if the target is in attack range<br/>
+(c1) if he is, then he tries to attack<br/>
+  (c1.1) if the target has a shielding buff, then the attack deals no<br/>
+  (c1.2) negative effect; otherwise, it does<br/>
+(c2) if he is not, then the robot calculates the optimal route to the target<br/>
+(d) the robot moves along the direction <br/>
 
 ### Activity Diagram
 ![Activity Diagram](../activity_diagrams/robots_attack.svg)
