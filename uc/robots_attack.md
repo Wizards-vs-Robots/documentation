@@ -1,4 +1,4 @@
-# Use-Case Specification: Robots Attacking
+# Use-Case Specification: Fight Wizard
 
 # 1. Fight Wizard
 
@@ -7,8 +7,14 @@ This use case describes that the AI (embodied by robots) attacks the wizards.
 
 ## 1.2 Mockup
 
+Mockup one shows the robots before the activity diagram is executed. 
+![Robots Farther](../mockups/fight_wizard_farther.png)
+
+Mockup two shows the robots during activation of the activity diagram.  
+All robots except the one closest to the wizard have already moved while the one closest to the wizard is currently attacking.
+![Robots Closer](../mockups/fight_wizard_closer.png)
+
 ## 1.3 Screenshots
-<INSERT IMAGE HERE>
 
 # 2. Flow of Events
 
