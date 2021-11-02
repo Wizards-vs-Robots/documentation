@@ -30,6 +30,7 @@ This in turn is then given to the game handler, which will move and render it.
 ![Activity Diagram](../activity_diagrams/cast_spells.svg)
 
 ### .feature File
+[Cast Spell](../features/cast_spell.feature)
 
 ## 2.2 Alternative Flows
 n/a
