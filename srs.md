@@ -139,6 +139,7 @@ UC Definitions:
 The player must be able to see his score, health (HP) and Mana (MP) in order to make decisions. Additionally, it should be possible to go the the _menu_ at any time. This is a core feature included in the scope for December.
 
 UC Definitions:
+- [Showing game information](./uc/hud.md).
 
 #### 3.1 c) Level Design
 Levels should also have different styles (i.e. different layouts/maps), but this is an additional feature.
@@ -163,6 +164,7 @@ shall be fancily animated and it should be possible to have different skins for 
 
 UC Definitions:
 - [Cast spells](./uc/cast_spells.md).
+- [Move wizard](./uc/move_wizard.md).
 
 #### 3.1 f) Player Progression System
 At first, the game should work in a basic manner. Therefore, the progression system will be part of the
