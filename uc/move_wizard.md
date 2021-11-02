@@ -8,6 +8,7 @@ This use case describes that the player can move the wizard around by using acce
 ## 1.2 Mockup
 The Wizard before he moves.
 ![Mockup](../mockups/WizardBeforeMove.png)
+
 Since nothing is blocking the wizard, he has moved, in this example to the left.
 ![Mockup](../mockups/WizardAfterMove.png)
 ## 1.3 Screenshots
