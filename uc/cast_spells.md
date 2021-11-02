@@ -7,6 +7,12 @@ This use case describes that the wizard can cast some spells, which deplete
 his mana resources and then bounce of into infinity until they hit something.
 
 ## 1.2 Mockup
+The wizard has loaded his attack (selected it, so the mist is flying around) </br>
+![Before Cast](../mockups/CastBefore.png)
+
+After the wizard casted his spell, his mana goes down and the ball of fire
+is sent flying: </br>
+![After Cast](../mockups/CastAfter.png)
 
 ## 1.3 Screenshots
 <INSERT IMAGE HERE>
