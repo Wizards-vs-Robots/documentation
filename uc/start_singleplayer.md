@@ -18,6 +18,7 @@ The player must press the button labelled "new game". Then it is checked, whethe
 ![Activity Diagram](../activity_diagrams/start_game.svg)
 
 ### .feature File
+[Start Game](../features/start_game.feature)
 
 ## 2.2 Alternative Flows
 n/a
