@@ -1,4 +1,4 @@
-# Use-Case Specification: Starting Single Player Games
+# Use-Case Specification: Moving the wizard
 
 # 1. Moving the wizard
 
