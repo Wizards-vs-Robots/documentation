@@ -30,7 +30,7 @@ in order to attack the player:
 (d) the robot moves along the direction <br/>
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/robots_attack.svg)
+![Activity Diagram](../activity_diagrams/fight_wizard.svg)
 
 ### .feature File
 
