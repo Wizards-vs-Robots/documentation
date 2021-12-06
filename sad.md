@@ -68,3 +68,47 @@ This separation allows for keeping the logic in one place (HealthModel) and
 handling rendering logic in another (HealthView). One could easily switch
 the rendering component, leading to different visual representations without
 having to modify core logic behind it.
+
+## 5. Logical View
+
+This section covers the logical view on our architecture with a short overview and a more in-depth UML diagram.
+
+### 5.1 Overview
+
+As our game utilizes the Unity engine, more information about the general architecture can be found [here](https://docs.unity3d.com/Manual/unity-architecture.html).
+However, in short: the view elements (like HUD, sprites etc.) are organized as game objects that are sequentially redrawn by the engine 
+(so that they always represent the state of their model). Controllers are also updated each game loop and can thus act upon the model which then in turn updates the view.
+
+We now built our own MVC architecture upon what we are given by Unity as shown in [5.2](#52-architecturally-significant-design-packages). 
+As such our sequentially updated controllers (attached to game objects) change data in the models which then in turn update the view. 
+Sometimes, however, the division between controllers and model can not be based upon classes but rather on methods (specifically the update model). 
+Yet this doesn't compromise our MVC architecture since view is always strictly separate from model and controller, which is the main aim of MVC. 
+
+### 5.2 Architecturally Significant Design Packages
+
+The following diagram shows how we realized the MVC architecture with our classes. Classes are grouped into model, view, and controller. 
+For a description of how the groups were determined [see section 3](#3-architectural-goals-and-constraints) and [5.1](#51-overview).
+
+![architecture](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/architecture.png)
+
+## 6. Process View
+n/a
+
+## 7. Deployment View
+
+This is our deployment diagram. The client computer will have the game binaries and game files such as save-games or highscores deployed on it. 
+
+![deployment-diagram](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/deployment-diagram.svg)
+
+## 8. Implementation View
+n/a
+
+## 9. Data View
+As per [4. Use-Case](#4-use-case), we do not plan to add persitent storage in this year's release. 
+Thus, this section will be updated once we move to highscores and potentially save-game files.
+
+## 10. Size and Performance
+n/a
+
+## Quality 
+n/a
