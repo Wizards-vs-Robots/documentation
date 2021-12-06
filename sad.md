@@ -39,6 +39,32 @@ Due to different styles and patterns in [different languages](https://de.wikiped
 stick to the historical MVC pattern - hence, there is no firmly-defined standard. It is allowed to merge
 the controller and model, but keep it separated from the view under all circumstances.
 </br>
+
 In order to reduce boilerplate and improve comprehensability, we decided to merge controllers and models.
 We classified each combination of controller and model that has to do with classical inheritance as model since they mostly and inherit data.
 All combinations having to do with general logic, like movement or wave management, are classified as controller.
+
+## 4. Use-Case
+This is the use case diagram covering our implementation plans for both semesters.
+Elements contained within yellow circles are set to be implemented in the first semester,
+the ones contained within green circles must be done until the end of the second one:
+![UCD](https://github.com/Wizards-vs-Robots/documentation/blob/main/ucd.svg)
+
+### 4.1 Use-Case Realizations
+Example: Showing Game Information (specifically: Health)
+![Overlay](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/ShowGameInformation.png)
+
+As a prime example for using MVC, the game overlay is to be mentioned. </br>
+(a) The visual component (health bar) is represented by its View component [HealthView](https://github.com/Wizards-vs-Robots/wvr/blob/dev/Assets/Scripts/HealthView.cs). </br>
+(b) The Model (+Controller) component is [HealthModel](https://github.com/Wizards-vs-Robots/wvr/blob/dev/Assets/Scripts/HealthModel.cs).
+It is responsible for reducing/incrementing </br> the health and dispatching the rendering to the respective View component.
+This component is the interface to the health bar. </br>
+
+**Note**: We merged the Model and Controller component. This makes sense in this situation, because
+we don't have a database, we want to abstract away, we just have some fields to be stored in a structure.
+Separating both would case massive boilerplate and make the code incomprehensive. </br>
+
+This separation allows for keeping the logic in one place (HealthModel) and
+handling rendering logic in another (HealthView). One could easily switch
+the rendering component, leading to different visual representations without
+having to modify core logic behind it.
