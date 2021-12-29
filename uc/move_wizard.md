@@ -22,6 +22,7 @@ The player must press a valid input key, then it is checked if that input is val
 ![Activity Diagram](../activity_diagrams/move_wizard.svg)
 
 ### .feature File
+[Move Wizard Feature File](../features/move_wizard.feature)
 
 ## 2.2 Alternative Flows
 n/a
