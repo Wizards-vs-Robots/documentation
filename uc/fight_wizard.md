@@ -34,6 +34,8 @@ in order to attack the player:
 
 ### .feature File
 
+[Fight Wizard Feature File](../features/fight_wizard.feature)
+
 ## 2.2 Alternative Flows
 n/a
 
