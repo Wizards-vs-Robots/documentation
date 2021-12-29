@@ -28,6 +28,7 @@ and displays the percentages and HP/MP meters.
 ![Activity Diagram](../activity_diagrams/hud.svg)
 
 ### .feature File
+[HUD Feature File](../features/hud.feature)
 
 ## 2.2 Alternative Flows
 n/a
