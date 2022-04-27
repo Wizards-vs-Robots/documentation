@@ -3,7 +3,7 @@
 # 1. Fight Wizard
 
 ## 1.1 Brief Description
-This use case describes that the AI (embodied by robots) attacks the wizards.
+This use case describes that robots attack the wizard(s).
 
 ## 1.2 Mockup
 
@@ -16,18 +16,19 @@ All robots except the one closest to the wizard have already moved while the one
 
 ## 1.3 Screenshots
 
+![Before Cast](../res/ss/fight_wizard_1.PNG)
+
+As can be seen, the robots move closer to the wizard, some even from outside the screenshot. When they come too close, the health bar is being lowered (green bar to the left).
+
+![Before Cast](../res/ss/fight_wizard_2.PNG)
+
 # 2. Flow of Events
 
 ## 2.1 Basic Flow
-During each game tick (internal update), the following is done by the AI actor
-in order to attack the player:
-(a) select target <br/>
-(b) check if the target is in attack range<br/>
-(c1) if he is, then he tries to attack<br/>
-  (c1.1) if the target has a shielding buff, then the attack deals no<br/>
-  (c1.2) negative effect; otherwise, it does<br/>
-(c2) if he is not, then the robot calculates the optimal route to the target<br/>
-(d) the robot moves along the direction <br/>
+During each game tick, the following is done by the AI actor in order to attack the player:
+- select target 
+- check if the target is in attack range and attack
+- otherwise, calculates the optimal route to the target and move along that direction 
 
 ### Activity Diagram
 ![Activity Diagram](../activity_diagrams/fight_wizard.svg)
@@ -44,12 +45,13 @@ n/a
 
 # 4. Preconditions
 The preconditions for this use case are:
-1. The wave has started.
-2. The attacking robot has been spawned.
-3. There are possible targets.
+1. The game is in a running state
+2. A roboter wave has started.
+3. The attacking robot has been spawned.
+4. There are possible targets.
 
 # 5. Postconditions
 The postconditions for this use case are:
-1. A robot is taking the optimal route to the targeted (depending on the robot class: e.g. low vitals, closest etc.) wizard.
-2. The target has been attacked if the robot was near enough.
+1. All spawned robots are either closer to a target or
+2. have attacked a target
 3. The AI has used all robots.

@@ -13,6 +13,12 @@ Since nothing is blocking the wizard, he has moved, in this example to the left.
 ![Mockup](../mockups/WizardAfterMove.png)
 ## 1.3 Screenshots
 
+![Show hud](../res/ss/move_wizard_1.PNG)
+
+The heart has nothing to do with this Use Case but to give a not-moving visual reference.
+
+![Show hud](../res/ss/move_wizard_2.PNG)
+
 # 2. Flow of Events
 
 ## 2.1 Basic Flow
@@ -36,4 +42,4 @@ The preconditions for this use case are:
 
 # 5. Postconditions
 The postconditions for this use case are:
-1. The game is in a running state
+1. The player is either in front of an obstacle or has moved in the according direction
