@@ -143,47 +143,38 @@ Testing the interface in Unity is quite a challenge because it cannot be tested 
 
 ### 5.2 Testing Techniques and Types
 
-#### 5.2.1 Data and Database Integrity Testing
+#### 5.2.1 Data Integrity Testing
 
-[The databases and the database processes should be tested as an independent subsystem. This testing should test the subsystems without the target-of-test's User Interface as the interface to the data. Additional research into the DataBase Management System (DBMS) needs to be performed to identify the tools and techniques that may exist to support the testing identified in the following table.]
 
 |                        | Description                         | 
 |------------------------|-------------------------------------|
 | Technique Objective    | Ensure that the implemented functions are working as expected. |
-| Technique              | Implement QTests and Qt Quick tests |
+| Technique              | Implement Unit tests |
 | Oracles                | Test Logs, console printings and code coverage calculations |
-| Required Tools         | QtCreator |
+| Required Tools         | Unity, Rider, GitHub Actions |
 | Success Criteria       | All tests pass and the required code coverage is given |
-||[TravisCI](https://travis-ci.org/VisualRacing/VisualRacing) and [Appveyor](https://ci.appveyor.com/project/ChristopherKlammt/visualracing) build pass and all tests run green|
 | Special Considerations | - |
 
 #### 5.2.2 Functional Testing
 
-[Function testing of the target-of-test should focus on any requirements for test that can be traced directly to use cases or business functions and business rules. The goals of these tests are to verify proper data acceptance, processing, and retrieval, and the appropriate implementation of the business rules. This type of testing is based upon black box techniques; that is, verifying the application and its internal processes by interacting with the application via the Graphical User Interface (GUI) and analyzing the output or results. The following table identifies an outline of the testing recommended for each application.]
-
 |                        | Description                         | 
 |------------------------|-------------------------------------|
 | Technique Objective    | Ensure that the implemented functions are working as expected. |
-| Technique              | Implement QTests and Qt Quick tests |
+| Technique              | Implement Unit tests |
 | Oracles                | Test Logs, console printings and code coverage calculations |
-| Required Tools         | QtCreator |
+| Required Tools         | Unity, Rider, GitHub Actions |
 | Success Criteria       | All tests pass and the required code coverage is given |
-||[TravisCI](https://travis-ci.org/VisualRacing/VisualRacing) and [Appveyor](https://ci.appveyor.com/project/ChristopherKlammt/visualracing) build pass and all tests run green|
 | Special Considerations | - |
 
 #### 5.2.3 Unit Testing
-The concept of unit testing is to structure the code into pieces that are as small as possible. These units are going to be tested individually to check the functionality on the lowest possible level. Due to this partitioning of the implementation, bugs and problems can be found rather easily. If the granular functionalities have been approved, the units can be put together to modules, which then will be tested on this higher level. Unit Testing has proven to be a good way to find bugs and problems in software early and reliable.
-
-For unit testing QTest and Qt Quick Test are used in this project.
 
 |                        | Description                         | 
 |------------------------|-------------------------------------|
 | Technique Objective    | Ensure that the implemented functions are working as expected. |
-| Technique              | Implement QTests and Qt Quick tests |
+| Technique              | Implement Unit tests |
 | Oracles                | Test Logs, console printings and code coverage calculations |
-| Required Tools         | QtCreator |
+| Required Tools         | Unity, Rider, GitHub Actions |
 | Success Criteria       | All tests pass and the required code coverage is given |
-||[TravisCI](https://travis-ci.org/VisualRacing/VisualRacing) and [Appveyor](https://ci.appveyor.com/project/ChristopherKlammt/visualracing) build pass and all tests run green|
 | Special Considerations | - |
 
 
@@ -205,11 +196,11 @@ The process of testing leads to a passing of all tests without errors.
 
 ## 7.1 Test Evaluation Summaries
 
-n/a
+https://github.com/Wizards-vs-Robots/wvr/actions/workflows/cicd.yaml
 
 ## 7.2 Reporting on Test Coverage
 
-[Provide a brief outline of both the form and content of the reports used to measure the extent of testing, and indicate how frequently they will be produced. Give an dication as to the method and tools used to record, measure, and report on the extent of testing.]
+Reporting is done by via the GitHub actions tab in our development repository
 
 ## 7.3 Perceived Quality Reports
 
@@ -217,7 +208,7 @@ n/a
 
 ## 7.4 Incident Logs and Change Requests
 
-[Provide a brief outline of both the method and tools used to record, track, and manage test incidents, associated change requests, and their status.]
+Test are managed in JetBrains Rider, recorded and tracked with GitHub Actions
 
 ## 7.5 Smoke Test Suite and Supporting Test Scripts
 
@@ -227,11 +218,10 @@ n/a
 n/a
 
 ### 7.6.1     Detailed Test Results
-n/a
+See section [7.2](#72-reporting-on-test-coverage)
 
 ### 7.6.2     Additional Automated Functional Test Scripts
-[These will be either a collection of the source code files for automated test scripts, or the repository of both source code and compiled executables for test scripts maintained by the test automation product.]
-
+n/a
 ### 7.6.3     Test Guidelines
 n/a
 
@@ -242,17 +232,7 @@ n/a
 
 ## 8. Testing Workflow
 
-[Provide an outline of the workflow to be followed by the test team in the development and execution of this Test Plan.
-The specific testing workflow that you will use should be documented separately in the project's Development Case. It should explain how the project has customized the base RUP test workflow (typically on a phase-by-phase basis). In most cases, we recommend you place a reference in this section of the Test Plan to the relevant section of the Development Case. It might be both useful and sufficient to simply include a diagram or image depicting your test workflow.
-More specific details of the individual testing tasks are defined in a number of different ways, depending on project culture; for example:
-* defined as a list of tasks in this section of the Test Plan, or in an accompanying appendix
-* defined in a central project schedule (often in a scheduling tool such as Microsoft Project)
-* documented in individual, "dynamic" to-do lists for each team member, which are usually too detailed to be placed in the Test Plan
-* documented on a centrally located whiteboard and updated dynamically
-* not formally documented at all
-Based on your project culture, you should either list your specific testing tasks here or provide some descriptive text explaining the process your team uses to handle detailed task planning and provide a reference to where the details are stored, if appropriate.
-For Master Test Plans, we recommend avoiding detailed task planning, which is often an unproductive effort if done as a front-loaded activity at the beginning of the project. A Master Test Plan might usefully describe the phases and the number of iterations, and give an indication of what types of testing are generally planned for each Phase or Iteration.
-Note: Where process and detailed planning information is recorded centrally and separately from this Test Plan, you will have to manage the issues that will arise from having duplicate copies of the same information. To avoid team members referencing out-of-date information, we suggest that in this situation you place the minimum amount of process and planning information within the Test Plan to make ongoing maintenance easier and simply reference the "Master" source material.]
+Tests are automatically ran before deployment on GitLab.
 
 ## 9. Environmental Needs
 
@@ -323,4 +303,4 @@ We want to keep over 50% code coverage.
 
 ## 12. Risks, Dependencies, Assumptions, and Constraints
 
-Risks regarding the integration of new Unit Tests into our Test workflow will be handled by the Implementer directly.                                                                  |
+Risks regarding the integration of new Unit Tests into our Test workflow will be handled by the Implementer directly.                                                                  
