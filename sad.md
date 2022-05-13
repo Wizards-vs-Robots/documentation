@@ -18,7 +18,7 @@ doing conventional operations (e.g. interface testing) are explained.
 ### 1.4 References
 |   Title   |   Date   |    Link    |
 |-----------|----------|------------|
-| Blog      |  05.10.2021 | https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/ |
+| Blog      | 05.10.2021 | https://4kills.wordpress.com/2021/10/05/wizards-vs-robots/ |
 | GitHub    | 12.10.2021 | https://github.com/Wizards-vs-Robots |
 | SRS       | 02.11.2021 | https://github.com/Wizards-vs-Robots/documentation/blob/main/srs.md |
 
@@ -62,7 +62,7 @@ This component is the interface to the health bar. </br>
 
 **Note**: We merged the Model and Controller component. This makes sense in this situation, because
 we don't have a database, we want to abstract away, we just have some fields to be stored in a structure.
-Separating both would case massive boilerplate and make the code incomprehensive. </br>
+Separating both would cause massive boilerplate and make the code incomprehensive. </br>
 
 This separation allows for keeping the logic in one place (HealthModel) and
 handling rendering logic in another (HealthView). One could easily switch
@@ -97,15 +97,13 @@ n/a
 ## 7. Deployment View
 
 This is our deployment diagram. The client computer will have the game binaries and game files such as save-games or highscores deployed on it. 
-
 ![deployment-diagram](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/deployment-diagram.svg)
 
 ## 8. Implementation View
 n/a
 
 ## 9. Data View
-As per [4. Use-Case](#4-use-case), we do not plan to add persitent storage in this year's release. 
-Thus, this section will be updated once we move to highscores and potentially save-game files.
+Since the game only stores highscores persistently in a simple dedicated file, no database and hence no scheme is needed.
 
 ## 10. Size and Performance
 n/a
