@@ -16,11 +16,11 @@ All robots except the one closest to the wizard have already moved while the one
 
 ## 1.3 Screenshots
 
-![Before Target](../res/ss/fight_wizard_target.png)
+![Before Target](../res/game/fight_wizard_target.png)
 
 As can be seen, the robots move closer to the wizard, some even from outside the screen. When they come too close, the health bar is being lowered (green bar to the left).
 
-![Attacking](../res/ss/fight_wizard_attack.png)
+![Attacking](../res/game/fight_wizard_attack.png)
 
 # 2. Flow of Events
 
