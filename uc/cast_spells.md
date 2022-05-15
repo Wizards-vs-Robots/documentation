@@ -1,6 +1,6 @@
-# Use-Case Specification: Casting Spells
+# Use-Case Specification: Cast Spells
 
-# 1. Casting Spells
+# 1. Cast Spells
 
 ## 1.1 Brief Description
 This use case describes that the wizard can cast some spells, which deplete
@@ -8,20 +8,20 @@ his mana resources and then bounce of into infinity until they hit something.
 
 ## 1.2 Mockup
 The wizard is ready to attack </br>
-![Before Cast](../mockups/CastBefore.png)
+![Before Cast](../res/mockups/CastBefore.png)
 
 After the wizard casted his spell, his mana goes down and the ball of fire
 is sent flying: </br>
-![After Cast](../mockups/CastAfter.png)
+![After Cast](../res/mockups/CastAfter.png)
 
 ## 1.3 Screenshots
-![Before Cast](../res/ss/cast_spells_1.PNG)
+![Before Cast](../res/game/cast_spells_before.png)
 
 The wizard is in game and has full mana(middle blue bar)
 
-![After Cast](../res/ss/cast_spells_2.PNG)
+![After Cast](../res/game/cast_spells_after.png)
 
-The mana bar is (slightly) lower and the spell (brown mass) is sent flying
+The mana bar is (slightly) lower and the spell (brown stone) is sent flying.
 
 # 2. Flow of Events
 
@@ -34,7 +34,7 @@ This in turn is then given to the game handler, which will move and render it.
 Otherwise, nothing happens.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/cast_spells.svg)
+![Activity Diagram](../res/activity_diagrams/cast_spells.svg)
 
 ### .feature File
 [Cast Spell](../features/cast_spell.feature)
