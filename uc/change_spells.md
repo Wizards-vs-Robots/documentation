@@ -1,9 +1,10 @@
-# Use-Case Specification: Change Spell
+# Use-Case Specification: Change Spells
 
-# 1. Change between different spells
+# 1. Change Spells
 
 ## 1.1 Brief Description
-Players need to be able to use every spell by rotating through all available spells.
+The player is able to select from unlocked spells.
+
 ## 1.2 Mockup
 
 n/a
@@ -14,10 +15,10 @@ n/a
 
 ## 2.1 Basic Flow
 
-By pressing a specified button, the next spell gets selected. The currently selected spell gets indicated on the UI in the bottom left corner. When performing the cast_spells Usecase, a different spell will be activated with different properties.
+By pressing a specified button, the next spell gets selected.
 
 ### Activity Diagram
-![Activity Diagram]()
+![Activity Diagram](../res/activity_diagrams/change_spells.md)
 
 ### .feature File
 n/a
@@ -35,6 +36,6 @@ The preconditions for this use case are:
 
 # 5. Postconditions
 The postconditions for this use case are:
-1. The next available spell is indicated
+1. The next unlocked spell is selected.
 2. When casting a spell, the newly chosen spell gets used
 
