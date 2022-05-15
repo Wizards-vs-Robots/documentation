@@ -88,8 +88,8 @@ This test plan contains more technically detailed information and does not provi
 | [Blog](https://4kills.wordpress.com/)                                   | Apr. 2022  |                  |
 | [GitHub Repository](https://github.com/Wizards-vs-Robots/documentation)                                                   | Apr. 2022|                  |
 | [Use Cases](https://github.com/Wizards-vs-Robots/documentation/tree/main/uc)                                        | Apr. 2022  |                  |
-| [SRS](https://github.com/Wizards-vs-Robots/documentation/blob/main/srs.md)                          | Apr. 2022  |                  |
-| [SAD](https://github.com/Wizards-vs-Robots/documentation/blob/main/sad.md)                               | Apr. 2022  |                  |
+| [SRS](srs.md)                          | Apr. 2022  |                  |
+| [SAD](sad.md)                               | Apr. 2022  |                  |
 
 
 ## 2. Evaluation Mission and Test Motivation
@@ -201,15 +201,15 @@ The summary can be found under:
 https://github.com/Wizards-vs-Robots/wvr/actions/workflows/cicd.yaml
 
 The overview looks as follows:
-![Overview Of GitHub Actions Runs](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/actions_overview.png)
+![Overview Of GitHub Actions Runs](../res/general/actions_overview.png)
 
 The detail view for a successful run informs about the run time of the test, the issuer, the target platforms and the
 executed test parts:
-![Successful Run](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/actions_success.png)
+![Successful Run](../res/general/actions_success.png)
 
 The detail view for a failed run additionally informs about the failed test part, the reason of its failure and additional
 warnings:
-![Failed Run](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/actions_failed.png)
+![Failed Run](../res/general/actions_failed.png)
 
 ## 7.2 Reporting on Test Coverage
 
