@@ -48,11 +48,11 @@ All combinations having to do with general logic, like movement or wave manageme
 This is the use case diagram covering our implementation plans for both semesters.
 Elements contained within yellow circles are set to be implemented in the first semester,
 the ones contained within green circles must be done until the end of the second one:
-![UCD](https://github.com/Wizards-vs-Robots/documentation/blob/main/ucd.svg)
+![UCD](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/general/ucd.svg)
 
 ### 4.1 Use-Case Realizations
 Example: Showing Game Information (specifically: Health)
-![Overlay](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/ShowGameInformation.png)
+![Overlay](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/game/ShowGameInformation.png)
 
 As a prime example for using MVC, the game overlay is to be mentioned. </br>
 (a) The visual component (health bar) is represented by its View component [HealthView](https://github.com/Wizards-vs-Robots/wvr/blob/dev/Assets/Scripts/HealthView.cs). </br>
@@ -89,7 +89,7 @@ Yet this doesn't compromise our MVC architecture since view is always strictly s
 The following diagram shows how we realized the MVC architecture with our classes. Classes are grouped into model, view, and controller. 
 For a description of how the groups were determined [see section 3](#3-architectural-goals-and-constraints) and [5.1](#51-overview).
 
-![architecture](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/architecture.png)
+![architecture](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/general/architecture.png)
 
 ## 6. Process View
 n/a
@@ -97,7 +97,7 @@ n/a
 ## 7. Deployment View
 
 This is our deployment diagram. The client computer will have the game binaries and game files such as save-games or highscores deployed on it. 
-![deployment-diagram](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/deployment-diagram.svg)
+![deployment-diagram](https://github.com/Wizards-vs-Robots/documentation/blob/main/res/general/deployment_diagram.svg)
 
 ## 8. Implementation View
 n/a
