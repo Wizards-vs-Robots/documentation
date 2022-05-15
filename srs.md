@@ -62,14 +62,12 @@ The _multiplayer_ sub-system allows for another _player_ (a _coop player_) to jo
 | ------------ | -------------------------------------- |
 | HP           | Health Points                          |
 | MP           | Mana Points                            |
-| EXP, XP      | Experience Points                      | 
 | AI           | Artificial Intelligence                | 
 | SRS          | Software Requirements Specification    |
 | UC           | Use Case                               |
 | n/a          | not applicable                         |
 | tbd          | to be determined                       |
 | UCD          | overall Use Case Diagram               |
-| FAQ          | Frequently asked Questions             |
 | UT	       | Unit Testing				|
 
 * Mana: Resource needed to cast spells. Quantifiable through MP. 
