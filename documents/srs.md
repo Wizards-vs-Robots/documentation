@@ -92,7 +92,7 @@ Please refer to [our first blog entry](https://4kills.wordpress.com/2021/10/05/w
 
 ### 2.2 Use Case Diagram
 
-![OUCD](./ucd.svg)
+![OUCD](../res/general/ucd.svg)
 
 - Green: Planned till end of December 2021
 - Yellow: Planned till end of June 2022
@@ -125,16 +125,16 @@ The player is able to open up single- and multiplayer games, inspect local highs
 and change settings to his liking.
 
 UC Definitions:
-- [Singleplayer](./uc/start_singleplayer.md).
-- [Multiplayer](./uc/multiplayer.md).
-- [Change Settings](./uc/change_settings.md).
-- [View Highscore](./uc/view_highscore.md).
+- [Singleplayer](../uc/start_singleplayer.md).
+- [Multiplayer](../uc/multiplayer.md).
+- [Change Settings](../uc/change_settings.md).
+- [View Highscore](../uc/view_highscore.md).
 
 #### 3.1 b) In-Game Overlay
 The player must be able to see his score, health (HP) and Mana (MP) in order to make decisions. Additionally, it should be possible to go the the _menu_ at any time. This is a core feature included in the scope for December.
 
 UC Definitions:
-- [Showing game information](./uc/hud.md).
+- [Showing game information](../uc/hud.md).
 
 #### 3.1 c) Level Design
 Levels should also have different styles (i.e. different layouts/maps), but this is an additional feature.
@@ -145,8 +145,8 @@ engaging, there are different robot classes with different defining attributes. 
 rewarded for killing robots.
 
 UC Definitions:
-- [Fight Wizards](./uc/robots_attack.md).
-- [Drop Reward](./uc/drop_reward.md).
+- [Fight Wizards](../uc/robots_attack.md).
+- [Drop Reward](../uc/drop_reward.md).
 
 #### 3.1 e) Wizard
 The game's protagonists are wizards. They defeat the robots using their spells and magic.
@@ -155,16 +155,16 @@ In order to help fighting the progressivly stronger waves, the wizard can choose
 spells, which all have different aspects.
 
 UC Definitions:
-- [Cast spells](./uc/cast_spells.md).
-- [Move wizard](./uc/move_wizard.md).
+- [Cast spells](../uc/cast_spells.md).
+- [Move wizard](../uc/move_wizard.md).
 
 #### 3.1 f) Player Progression System
 There is an overview showing available and unlocked skills. The score controls
 whether skills can be used or not. It acts like experience.
 
 UC Definitions:
-- [Inspect Progression Window](./uc/inspect_progression_window.md).
-- [Unlock Skills](./uc/unlock_skills.md).
+- [Inspect Progression Window](../uc/inspect_progression_window.md).
+- [Unlock Skills](../uc/unlock_skills.md).
 
 #### 3.1 g) Multiplayer
 Mutliplayer is implemented as a so-called "same machine" multiplayer, meaning that they use the
@@ -173,8 +173,8 @@ can now play with others and communicate with them and second playing together w
 inherent effects on the game like stronger waves.
 
 UC Definitions:
-- [Multiplayer](./uc/multiplayer.md).
-- [Stronger Robots](./uc/stronger_robots.md)
+- [Multiplayer](../uc/multiplayer.md).
+- [Stronger Robots](../uc/stronger_robots.md)
 
 #### 3.1 h) Robot Progression System
 This system allows the robots to become stronger throughout the game in order to balance the _player progression_ system.
@@ -182,8 +182,8 @@ The waves are given a higher power contingent each time they are issued. That wa
 world with each enemy wave.
 
 UC Definitions:
-- [Spawn Different Robot Classes](./uc/spawn_different_robot_classes.md).
-- [Spawn Progressively Stronger Waves](./uc/spawn_wave.md).
+- [Spawn Different Robot Classes](../uc/spawn_different_robot_classes.md).
+- [Spawn Progressively Stronger Waves](../uc/spawn_wave.md).
 
 ### 3.2 Usability
 We plan on designing the user interface as intuitive and self-explanatory as possible.
@@ -218,7 +218,7 @@ helps to prevent bugs. We settled on [Google Coding Conventions](https://google.
 they are well-known and thoughfully developed.
 
 #### 3.5.2 Testing Strategy
-As described in our [test plan](https://github.com/Wizards-vs-Robots/documentation/blob/main/test_plan.md) 
+As described in our [test plan](testing.md) 
 and explained in detail on [our blog](https://4kills.wordpress.com/2022/04/26/testing-leads-to-bugs/), we
 strive for a low coverage. For new components, we will use [TDD](https://en.wikipedia.org/wiki/Test-driven_development),
 as it is industry standard and allows for avoiding bugs right from the start. For already existing
