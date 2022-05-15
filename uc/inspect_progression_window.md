@@ -16,10 +16,11 @@ This use case describes the need to check ones progression.
 
 ## 2.1 Basic Flow
 
-When progressing in the game, this progress can be seen by <TODO idk how tho>
+The player presses a button, which opens the progression window.
+From there, he can unlock new skills and inspect his progress.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/.svg)
+![Activity Diagram](../res/activity_diagrams/inspect_progression_window.svg)
 
 ### .feature File
 [Cast Spell](../features/.feature)
@@ -33,9 +34,7 @@ n/a
 # 4. Preconditions
 The preconditions for this use case are:
 1. The game is in a running state
-2. A certain score is reached
 
 # 5. Postconditions
 The postconditions for this use case are:
-1. The player can see his progress or sth.
-2. 
+1. The player can see inspect his already unlocked and unlockable skills.
