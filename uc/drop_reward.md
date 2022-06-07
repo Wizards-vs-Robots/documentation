@@ -19,7 +19,7 @@ This is an example of an drop of 50 health points (in form of a small red heart)
 With a certain propability, each robot drops a reward upon its death.
 
 ### Activity Diagram
-![Activity Diagram](../res/activity_diagrams/drop_reward.md)
+![Activity Diagram](../res/activity_diagrams/drop_reward.svg)
 
 ### .feature File
 n/a

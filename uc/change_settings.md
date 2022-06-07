@@ -20,7 +20,7 @@ The key bindings menu.
 When in the main menu, the settings can be customized via the options button.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/change_settings.svg)
+![Activity Diagram](../res/activity_diagrams/change_settings.svg)
 
 ### .feature File
 [Cast Spell](../features/.feature)

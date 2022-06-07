@@ -20,7 +20,7 @@ The Highscores overview.
 When in the main menu, the highscores can be customized via the highscores button. There, all scores that were a highscore as well as the time of their achieving can be seen.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/.svg)
+![Activity Diagram](../res/activity_diagrams/view_highscores.svg)
 
 ### .feature File
 [Cast Spell](../features/.feature)

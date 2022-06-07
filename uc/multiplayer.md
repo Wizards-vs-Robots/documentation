@@ -17,7 +17,7 @@ n/a
 When the game starts, two robots play against robots that come in stronger waves compared to the singleplayer game mode.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/start_multiplayer.svg)
+![Activity Diagram](../res/activity_diagrams/start_multiplayer.svg)
 
 ### .feature File
 n/a

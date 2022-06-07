@@ -23,7 +23,7 @@ Multiple Robots spawn nearly simultanously.
 At the start of the game or after a wave of robots is defeated, the game realizes the need to spawn a wave. Then, it calculates the needed strenght of the wave and spawns the according robots at fitting locations.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/spawn_wave.svg)
+![Activity Diagram](../res/activity_diagrams/spawn_wave.svg)
 
 
 ### .feature File

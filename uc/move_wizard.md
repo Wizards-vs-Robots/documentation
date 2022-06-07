@@ -25,7 +25,7 @@ The heart has nothing to do with this Use Case but to give a not-moving visual r
 The player must press a valid input key, then it is checked if that input is valid at this moment
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/move_wizard.svg)
+![Activity Diagram](../res/activity_diagrams/move_wizard.svg)
 
 ### .feature File
 [Move Wizard Feature File](../features/move_wizard.feature)

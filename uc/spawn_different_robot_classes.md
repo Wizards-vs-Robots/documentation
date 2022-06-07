@@ -27,7 +27,7 @@ The robots are then created in the game with random starting positions and a ran
 There are several tweaking possibilties to the decision algorithm for balancing purposes.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/spawn_different_robot_classes.svg)
+![Activity Diagram](../res/activity_diagrams/spawn_different_robot_classes.svg)
 
 ### .feature File
 [Spawn Different Robot Classes Feature File](../features/spawn_different_robot_classes.feature)

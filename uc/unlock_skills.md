@@ -19,7 +19,7 @@ This use case describes that different skills can be unlocked.
 When progressing in the game, different skills can be unlocked using score points. That happens automatically. Skills included are a dash and teleportation.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/.svg)
+![Activity Diagram](../res/activity_diagrams/unlock_skills.svg)
 
 ### .feature File
 [Cast Spell](../features/.feature)
