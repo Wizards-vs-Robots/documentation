@@ -18,7 +18,7 @@ This is an example of an drop of 50 health points (in form of a small red heart)
 With a certain propability depending on robot type and wave progression, each robot drops one available reward when it's defeated.
 
 ### Activity Diagram
-![Activity Diagram]()
+![Activity Diagram](../activity_diagrams/drop_reward.svg)
 
 ### .feature File
 n/a

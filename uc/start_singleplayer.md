@@ -17,7 +17,7 @@ This use case describes that the player can start a single player game from the 
 The player must press the button labelled "play". Then it is checked, whether he is currently in a game. If they do, robots, spells and the score return to their initial state. The game then will be in a running state
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/start_game.svg)
+![Activity Diagram](../activity_diagrams/start_singleplayer.svg)
 
 ### .feature File
 [Start Game](../features/start_game.feature)

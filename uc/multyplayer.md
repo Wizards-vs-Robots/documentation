@@ -2,7 +2,7 @@
 
 # 1. Local multiplayer
 ## 1.1 Brief Description
-Tho people can play together using one ore more input peripherals that are connected to the same multiplayer. Thay play both as robots with independent Health and Mana models against the same robots.
+Two people can play together using one ore more input peripherals that are connected to the same multiplayer. Thay play both as robots with independent Health and Mana models against the same robots.
 ## 1.2 Mockup
 
 n/a
@@ -17,7 +17,7 @@ n/a
 When the game starts, two robots play against robots that come in stronger waves compared to the singleplayer game mode.
 
 ### Activity Diagram
-![Activity Diagram]()
+![Activity Diagram](../activity_diagrams/start_multiplayer.svg)
 
 ### .feature File
 n/a

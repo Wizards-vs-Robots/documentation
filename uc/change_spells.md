@@ -17,7 +17,7 @@ n/a
 By pressing a specified button, the next spell gets selected. The currently selected spell gets indicated on the UI in the bottom left corner. When performing the cast_spells Usecase, a different spell will be activated with different properties.
 
 ### Activity Diagram
-![Activity Diagram]()
+![Activity Diagram](../activity_diagrams/change_spells.svg)
 
 ### .feature File
 n/a

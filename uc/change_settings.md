@@ -20,7 +20,7 @@ The key bindings menu.
 When in the main menu, the settings can be customized via the options button. Included settings are game speed and keybindings.
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/.svg)
+![Activity Diagram](../activity_diagrams/change_settings.svg)
 
 ### .feature File
 [Cast Spell](../features/.feature)

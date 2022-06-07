@@ -17,7 +17,8 @@ n/a
 At the start of the game the robot waves are relatively simple to defeat. With each wave, they get calculated with more and stronger robots, making it a continuous experience.
 
 ### Activity Diagram
-![Activity Diagram]()
+![Activity Diagram](../activity_diagrams/stronger_robots.svg)
+
 
 ### .feature File
 n/a
