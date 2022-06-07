@@ -8,19 +8,19 @@ This use case describes that robots attack the wizard(s).
 ## 1.2 Mockup
 
 Mockup one shows the robots before the activity diagram is executed. 
-![Robots Farther](../mockups/fight_wizard_farther.png)
+![Robots Farther](../res/mockups/fight_wizard_farther.png)
 
 Mockup two shows the robots during activation of the activity diagram.  
 All robots except the one closest to the wizard have already moved while the one closest to the wizard is currently attacking.
-![Robots Closer](../mockups/fight_wizard_closer.png)
+![Robots Closer](../res/mockups/fight_wizard_closer.png)
 
 ## 1.3 Screenshots
 
-![Before Cast](../res/ss/fight_wizard_1.PNG)
+![Before Target](../res/game/fight_wizard_target.png)
 
-As can be seen, the robots move closer to the wizard, some even from outside the screenshot. When they come too close, the health bar is being lowered (green bar to the left).
+As can be seen, the robots move closer to the wizard, some even from outside the screen. When they come too close, the health bar is being lowered (green bar to the left).
 
-![Before Cast](../res/ss/fight_wizard_2.PNG)
+![Attacking](../res/game/fight_wizard_attack.png)
 
 # 2. Flow of Events
 
@@ -31,7 +31,7 @@ During each game tick, the following is done by the AI actor in order to attack 
 - otherwise, calculates the optimal route to the target and move along that direction 
 
 ### Activity Diagram
-![Activity Diagram](../activity_diagrams/fight_wizard.svg)
+![Activity Diagram](../res/activity_diagrams/fight_wizard.svg)
 
 ### .feature File
 
@@ -46,7 +46,7 @@ n/a
 # 4. Preconditions
 The preconditions for this use case are:
 1. The game is in a running state
-2. A roboter wave has started.
+2. A robot wave has started.
 3. The attacking robot has been spawned.
 4. There are possible targets.
 

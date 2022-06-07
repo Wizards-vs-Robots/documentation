@@ -3,13 +3,13 @@
 # 1. Change Settings
 
 ## 1.1 Brief Description
-This use case describes that different settings can be adapdet to provide an individualized gameing experience.
+This use case describes that different settings can be adjusted to provide an individualized gaming experience.
 
 ## 1.2 Mockup
- n/a
+n/a
 
 ## 1.3 Screenshots
-![Before Cast](../res/ss/change_settings.PNG)
+![Before Cast](../res/game/change_settings.png)
 
 The key bindings menu.
 
@@ -17,7 +17,7 @@ The key bindings menu.
 # 2. Flow of Events
 
 ## 2.1 Basic Flow
-When in the main menu, the settings can be customized via the options button. Included settings are game speed and keybindings.
+When in the main menu, the settings can be customized via the options button.
 
 ### Activity Diagram
 ![Activity Diagram](../activity_diagrams/change_settings.svg)
@@ -33,8 +33,8 @@ n/a
 
 # 4. Preconditions
 The preconditions for this use case are:
-1. The game is in the main menu
+1. The game is not running (so either paused or main menu).
 
 # 5. Postconditions
 The postconditions for this use case are:
-1. The game experience is different, according to the different settings
+1. The settings have been updated.

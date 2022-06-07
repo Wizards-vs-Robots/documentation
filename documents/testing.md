@@ -88,8 +88,8 @@ This test plan contains more technically detailed information and does not provi
 | [Blog](https://4kills.wordpress.com/)                                   | Apr. 2022  |                  |
 | [GitHub Repository](https://github.com/Wizards-vs-Robots/documentation)                                                   | Apr. 2022|                  |
 | [Use Cases](https://github.com/Wizards-vs-Robots/documentation/tree/main/uc)                                        | Apr. 2022  |                  |
-| [SRS](https://github.com/Wizards-vs-Robots/documentation/blob/main/srs.md)                          | Apr. 2022  |                  |
-| [SAD](https://github.com/Wizards-vs-Robots/documentation/blob/main/sad.md)                               | Apr. 2022  |                  |
+| [SRS](srs.md)                          | Apr. 2022  |                  |
+| [SAD](sad.md)                               | Apr. 2022  |                  |
 
 
 ## 2. Evaluation Mission and Test Motivation
@@ -123,7 +123,6 @@ Tested parts:
 ### 4.1 Outline of Test Inclusions
 
 All mentioned test targets will be tested with unit tests.
-
 The tests themselves are not going to be tested and will not be part of the calculation of code coverage.
 
 ### 4.2 Outline of Other Candidates for Potential Inclusion
@@ -134,12 +133,13 @@ User interface testing would be an additional option to provide a working applic
 
 Testing the interface in Unity is quite a challenge because it cannot be tested with conventional interface testing technologies such as Selenium, due to no DOM tree. Performance testing is unlikely to prove effective due to many performance affecting parameters being out of our influence.
 
-
 ## 5. Test Approach
 
 
 ### 5.1 Initial Test-Idea Catalogs and Other Reference Sources
-
+Optimally, we use TDD (Test Driven Development) for newly created test targets. Since most of our code is already done,
+we obviously cannot make tests before writing up the tests. For new tests, however, this is possible.
+For already existing code, we try to make tests, which are as little biased as possible.
 
 ### 5.2 Testing Techniques and Types
 
@@ -189,18 +189,31 @@ The process of testing is to be executed when a new version of the application w
 
 #### 6.1.2 Test Plan Exit Criteria
 
-The process of testing leads to a passing of all tests without errors.
+The process of testing leads to a passing of all tests without errors. Only when that condition is met, construction and deployment
+can be triggered.
 
 
 ## 7. Deliverables
 
 ## 7.1 Test Evaluation Summaries
 
+The summary can be found under:
 https://github.com/Wizards-vs-Robots/wvr/actions/workflows/cicd.yaml
+
+The overview looks as follows:
+![Overview Of GitHub Actions Runs](../res/general/actions_overview.png)
+
+The detail view for a successful run informs about the run time of the test, the issuer, the target platforms and the
+executed test parts:
+![Successful Run](../res/general/actions_success.png)
+
+The detail view for a failed run additionally informs about the failed test part, the reason of its failure and additional
+warnings:
+![Failed Run](../res/general/actions_failed.png)
 
 ## 7.2 Reporting on Test Coverage
 
-Reporting is done by via the GitHub actions tab in our development repository
+Reporting is done by GitHub actions and the results can be inspected under the GitHub actions tab in our development repository.
 
 ## 7.3 Perceived Quality Reports
 
@@ -208,7 +221,7 @@ n/a
 
 ## 7.4 Incident Logs and Change Requests
 
-Test are managed in JetBrains Rider, recorded and tracked with GitHub Actions
+Test are managed in JetBrains Rider, recorded and tracked with GitHub Actions.
 
 ## 7.5 Smoke Test Suite and Supporting Test Scripts
 
@@ -256,17 +269,7 @@ The following base software elements are required in the test environment for th
 
 ### 9.3 Productivity and Support Tools
 
-The following tools will be employed to support the test process for this Test Plan.
-
-| Tool Category or Type             | Tool Brand Name | Vendor or In-house | Version |
-|-----------------------------------|-----------------|--------------------|---------|
-| Test Management                   |                 |                    |         |
-| Defect Tracking                   |                 |                    |         |
-| ASQ Tool for functional testing   |                 |                    |         |
-| ASQ Tool for performance testing  |                 |                    |         |
-| Test Coverate Monitor or Profiler |                 |                    |         |
-| Project Management                |                 |                    |         |
-| DBMS tools                        |                 |                    |         |
+n/a
 
 ### 9.4 Test Environment Configurations
 
@@ -274,11 +277,8 @@ The following Test Environment Configurations need to be provided and supported 
 
 | Configuration Name                | Description | Implemented in Physical Configuration |
 |-----------------------------------|-------------|---------------------------------------|
-| Average user configuration        |             |                                       |
-| Minimal configuration supported   |             |                                       |
-| Visually and mobility challenged  |             |                                       |
-| International Double Byte OS      |             |                                       |
-| Network installation (not client) |             |                                       |
+| GitHub Actions                    | Automated CI/CD provided by GitHub            | n/a                                      |
+| Unity C# Test Suite               | Integrated in Unity project            |                                       |
 
 ## 10. Responsibilities, Staffing, and Training Needs
 
@@ -299,7 +299,7 @@ n/a
 
 ## 11. Iteration Milestones
 
-We want to keep over 50% code coverage.
+We want to keep over 10% code coverage.
 
 ## 12. Risks, Dependencies, Assumptions, and Constraints
 
