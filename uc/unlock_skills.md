@@ -10,7 +10,8 @@ This use case describes that different skills can be unlocked.
 
 ## 1.3 Screenshots
 
-
+![Unlockable Skill](../res/activity_diagrams/unlockable_skill.png.png)
+The red dot next to the ressource bars indicates the skill is unlocked and ready to use.
 
 # 2. Flow of Events
 
@@ -19,10 +20,10 @@ This use case describes that different skills can be unlocked.
 When progressing in the game, different skills can be unlocked using score points. That happens automatically. Skills included are a dash and teleportation.
 
 ### Activity Diagram
-![Activity Diagram](../res/activity_diagrams/unlock_skills.svg)
+![Activity Diagram](../res/activity_diagrams/unlock_skill.svg)
 
 ### .feature File
-[Cast Spell](../features/.feature)
+[Unlock Spell](../features/unlock_skill.feature)
 
 ## 2.2 Alternative Flows
 n/a
