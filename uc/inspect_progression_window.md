@@ -10,20 +10,20 @@ This use case describes the need to check ones progression.
 
 ## 1.3 Screenshots
 
-
+![Before Target](../res/game/Progression Window.png.png)
 
 # 2. Flow of Events
 
 ## 2.1 Basic Flow
 
-The player presses a button, which opens the progression window.
-From there, he can unlock new skills and inspect his progress.
+The player walks into the skill tavern , which opens the progression window.
+From there, he can unlock new skills.
 
 ### Activity Diagram
-![Activity Diagram](../res/activity_diagrams/inspect_progression_window.svg)
+![Activity Diagram](../res/activity_diagrams/Progression Window.svg)
 
 ### .feature File
-[Cast Spell](../features/.feature)
+n/a
 
 ## 2.2 Alternative Flows
 n/a
@@ -37,4 +37,4 @@ The preconditions for this use case are:
 
 # 5. Postconditions
 The postconditions for this use case are:
-1. The player can see inspect his already unlocked and unlockable skills.
+1. The player can see  unlockable skills.
