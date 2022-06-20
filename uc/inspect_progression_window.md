@@ -23,7 +23,7 @@ From there, he can unlock new skills.
 ![Activity Diagram](../res/activity_diagrams/progression_window.svg)
 
 ### .feature File
-n/a
+[Inspect progression window](../features/progression_window.feature)
 
 ## 2.2 Alternative Flows
 n/a
