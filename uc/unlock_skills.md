@@ -10,7 +10,7 @@ This use case describes that different skills can be unlocked.
 
 ## 1.3 Screenshots
 
-![Unlockable Skill](../res/activity_diagrams/unlockable_skill.png.png)
+![Unlockable Skill](../res/activity_diagrams/unlockable_skill.png)
 The red dot next to the ressource bars indicates the skill is unlocked and ready to use.
 
 # 2. Flow of Events
