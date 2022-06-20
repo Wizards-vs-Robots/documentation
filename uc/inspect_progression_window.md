@@ -10,7 +10,7 @@ This use case describes the need to check ones progression.
 
 ## 1.3 Screenshots
 
-![Inspect progression window](../res/game/Progression Window.png)
+![Inspect progression window](../res/game/progression_window.png)
 
 # 2. Flow of Events
 
@@ -20,7 +20,7 @@ The player walks into the skill tavern , which opens the progression window.
 From there, he can unlock new skills.
 
 ### Activity Diagram
-![Activity Diagram](../res/activity_diagrams/Progression Window.svg)
+![Activity Diagram](../res/activity_diagrams/progression_window.svg)
 
 ### .feature File
 n/a
