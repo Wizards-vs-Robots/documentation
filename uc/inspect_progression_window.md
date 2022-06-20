@@ -10,7 +10,7 @@ This use case describes the need to check ones progression.
 
 ## 1.3 Screenshots
 
-![Before Target](../res/game/Progression Window.png.png)
+![Inspect progression window](../res/game/Progression Window.png)
 
 # 2. Flow of Events
 
